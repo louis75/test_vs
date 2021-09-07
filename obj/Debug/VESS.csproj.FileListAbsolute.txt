@@ -1,0 +1,14 @@
+C:\Users\zesti\source\repos\VESS\bin\Debug\VESS.exe.config
+C:\Users\zesti\source\repos\VESS\bin\Debug\VESS.exe
+C:\Users\zesti\source\repos\VESS\bin\Debug\VESS.pdb
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.csproj.AssemblyReference.cache
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.Form1.resources
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.Properties.Resources.resources
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.csproj.GenerateResource.cache
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.csproj.CoreCompileInputs.cache
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.exe
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.pdb
+C:\Users\zesti\source\repos\VESS\bin\Debug\VESS.exe.manifest
+C:\Users\zesti\source\repos\VESS\bin\Debug\VESS.application
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.exe.manifest
+C:\Users\zesti\source\repos\VESS\obj\Debug\VESS.application
