@@ -71,7 +71,7 @@ namespace WaveLib
 		}
         ~WaveOutBuffer()
         {
-            Dispose();
+            //Dispose();
         }
         public void Dispose()
         {
@@ -81,7 +81,7 @@ namespace WaveLib
                 m_HeaderHandle.Free();
                 m_Header.lpData = IntPtr.Zero;
             }
-            m_PlayEvent.Close();
+            m_PlayEvent?.Close();
             if (m_HeaderDataHandle.IsAllocated)
                 m_HeaderDataHandle.Free();
             GC.SuppressFinalize(this);
@@ -146,8 +146,10 @@ namespace WaveLib
 			m_zero = format.wBitsPerSample == 8 ? (byte)128 : (byte)0;
             m_FillProc = fillProc;
             WaveOutHelper.Try(WaveNative.waveOutOpen(out m_WaveOut, device, format, m_BufferProc, 0, WaveNative.CALLBACK_FUNCTION));
+            WaveNative.waveOutSetPlaybackRate(m_WaveOut, 0x00010000);
             AllocateBuffers(bufferSize, bufferCount);
             m_Thread = new Thread(new ThreadStart(ThreadProc));
+            //m_Thread = new Thread(ThreadProc);
             m_Thread.Start();
         }
         ~WaveOutPlayer()
@@ -167,7 +169,7 @@ namespace WaveLib
 					FreeBuffers();
 					if (m_WaveOut != IntPtr.Zero)
 						WaveNative.waveOutClose(m_WaveOut);
-				}
+                }
 				finally
 				{
 					m_Thread = null;
@@ -193,8 +195,7 @@ namespace WaveLib
 
 				}
                 m_CurrentBuffer.Play();
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
+
             }
 			WaitForAllBuffers();
 		}
@@ -258,9 +259,9 @@ namespace WaveLib
                 int value = (int)((double)volume * ushort.MaxValue / 100);
                 uint leftChannelValue = ((uint)value & 0x0000ffff); 
                 uint rightChannelValue = ((uint)value << 16);
-                //WaveNative.waveOutPause(m_WaveOut);
+               // WaveNative.waveOutPause(m_WaveOut);
                 WaveNative.waveOutSetVolume(IntPtr.Zero, (int)(leftChannelValue | rightChannelValue));
-                WaveNative.waveOutRestart(m_WaveOut);
+               // WaveNative.waveOutRestart(m_WaveOut);
             } 
             catch { }
 

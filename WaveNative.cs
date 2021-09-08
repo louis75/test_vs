@@ -104,5 +104,8 @@ namespace WaveLib
         public static extern int waveOutSetVolume(IntPtr hWaveOut, int dwVolume);
         [DllImport(mmdll)]
         public static extern int waveOutGetVolume(IntPtr hWaveOut, out int dwVolume);
+
+        [DllImport(mmdll, SetLastError = true, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Winapi)]
+        public static extern int waveOutSetPlaybackRate(IntPtr hwo, uint dwRate);
     }
 }

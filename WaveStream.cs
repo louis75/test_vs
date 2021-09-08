@@ -92,12 +92,13 @@ namespace WaveLib
 		}
 		~WaveStream()
 		{
-			Dispose();
+			//Dispose();
 		}
 		public void Dispose()
 		{
-			if (m_Stream != null)
-				m_Stream.Close();
+
+			m_Stream?.Close();
+			m_Stream?.Dispose();
 			GC.SuppressFinalize(this);
 		}
 
@@ -124,6 +125,8 @@ namespace WaveLib
 		}
 		public override void Close()
 		{
+			//m_Stream?.Close();
+			//m_Stream?.Dispose();
 			Dispose();
 		}
 		public override void Flush()

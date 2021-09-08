@@ -32,7 +32,7 @@ namespace VESS
         private WaveLib.WaveOutPlayer m_Player;
         private WaveLib.WaveFormat m_Format;
         private Stream m_AudioStream;
-        private System.Windows.Forms.OpenFileDialog OpenDlg;
+        //private System.Windows.Forms.OpenFileDialog OpenDlg;
 
         private void Filler(IntPtr data, int size)
         {
@@ -62,7 +62,9 @@ namespace VESS
             if (m_Player != null)
                 try
                 {
-                    m_Player.Dispose();
+                    Debug.WriteLine("Stop sound");
+                    m_Player?.Dispose();
+                    m_Player = null;
                 }
                 finally
                 {
@@ -75,6 +77,7 @@ namespace VESS
             Stop();
             if (m_AudioStream != null)
             {
+                Debug.WriteLine("Play sound");
                 m_AudioStream.Position = 0;
                 m_Player = new WaveLib.WaveOutPlayer(-1, m_Format, 16384, 3, new WaveLib.BufferFillEventHandler(Filler));
             }
@@ -86,7 +89,9 @@ namespace VESS
             if (m_AudioStream != null)
                 try
                 {
-                    m_AudioStream.Close();
+                    m_AudioStream?.Close();
+                    m_AudioStream?.Dispose();
+                    m_AudioStream = null;
                 }
                 finally
                 {
@@ -97,7 +102,7 @@ namespace VESS
         public enum WaveSrc { SOUND1, SOUND2, SOUND3, SOUND4, SOUND5, SOUND6, SOUND_MAX };
         private void OpenWaveFile(int num, ref string filename, string txtsavefilename)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
+            var dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 filename = dlg.FileName;
@@ -118,6 +123,7 @@ namespace VESS
                 {
                     CloseFile();
                     MessageBox.Show(ex.Message);
+                    GC.SuppressFinalize(this);
                 }
                 Debug.WriteLine("m_Format.wBitsPerSample:" + m_Format.wBitsPerSample.ToString());
                 Debug.WriteLine("m_Format.nChannels:" + m_Format.nChannels.ToString());
@@ -130,7 +136,7 @@ namespace VESS
 
                 Debug.WriteLine(sampleBuffer.Length.ToString() + " " + sampleBuffer[0].ToString("X4"));
                 saveAsciiFromWav(sampleBuffer, txtsavefilename);
-                
+                GC.SuppressFinalize(this);
             }
         }
 
@@ -592,13 +598,13 @@ namespace VESS
                 if (Mute_flag)
                 {
                     int val = Convert.ToInt16(trackBar_volume.Value.ToString());
-                    m_Player.set_volume(0);
+                    m_Player?.set_volume(0);
                     Mute_flag = false;
                 }
                 else
                 {
                     int val = Convert.ToInt16(trackBar_volume.Value.ToString());
-                    m_Player.set_volume(val);
+                    m_Player?.set_volume(val);
                     Mute_flag = true;
                 }
             //}
