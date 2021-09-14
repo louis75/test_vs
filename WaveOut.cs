@@ -146,7 +146,7 @@ namespace WaveLib
 			m_zero = format.wBitsPerSample == 8 ? (byte)128 : (byte)0;
             m_FillProc = fillProc;
             WaveOutHelper.Try(WaveNative.waveOutOpen(out m_WaveOut, device, format, m_BufferProc, 0, WaveNative.CALLBACK_FUNCTION));
-            WaveNative.waveOutSetPlaybackRate(m_WaveOut, 0x00010000);
+            WaveNative.waveOutSetPlaybackRate(m_WaveOut, 0x00010001);
             AllocateBuffers(bufferSize, bufferCount);
             m_Thread = new Thread(new ThreadStart(ThreadProc));
             //m_Thread = new Thread(ThreadProc);
@@ -261,7 +261,8 @@ namespace WaveLib
                 uint rightChannelValue = ((uint)value << 16);
                // WaveNative.waveOutPause(m_WaveOut);
                 WaveNative.waveOutSetVolume(IntPtr.Zero, (int)(leftChannelValue | rightChannelValue));
-               // WaveNative.waveOutRestart(m_WaveOut);
+               // WaveNative.waveOutSetPlaybackRate(m_WaveOut, 0x00010001);
+                // WaveNative.waveOutRestart(m_WaveOut);
             } 
             catch { }
 

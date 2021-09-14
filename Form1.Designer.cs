@@ -261,6 +261,9 @@ namespace VESS
             this.trackBar_s2_7 = new System.Windows.Forms.TrackBar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button_config_import = new System.Windows.Forms.Button();
+            this.button_config_export = new System.Windows.Forms.Button();
+            this.button_dump = new System.Windows.Forms.Button();
             this.checkBox_mute_reverse = new System.Windows.Forms.CheckBox();
             this.checkBox_Mute = new System.Windows.Forms.CheckBox();
             this.checkBox_mute5 = new System.Windows.Forms.CheckBox();
@@ -277,7 +280,6 @@ namespace VESS
             this.button_StopEngine = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
-            this.button_dump = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_s1_7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_s1_6)).BeginInit();
@@ -417,9 +419,9 @@ namespace VESS
             this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label11.Location = new System.Drawing.Point(14, 311);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 12);
+            this.label11.Size = new System.Drawing.Size(47, 12);
             this.label11.TabIndex = 105;
-            this.label11.Text = "15Km/h";
+            this.label11.Text = "15km/h";
             // 
             // textBox_s1_7
             // 
@@ -427,15 +429,15 @@ namespace VESS
             this.textBox_s1_7.Location = new System.Drawing.Point(78, 308);
             this.textBox_s1_7.Name = "textBox_s1_7";
             this.textBox_s1_7.ReadOnly = true;
-            this.textBox_s1_7.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_7.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_7.TabIndex = 103;
             this.textBox_s1_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // trackBar_s1_7
             // 
             this.trackBar_s1_7.LargeChange = 10;
-            this.trackBar_s1_7.Location = new System.Drawing.Point(122, 308);
-            this.trackBar_s1_7.Maximum = 99;
+            this.trackBar_s1_7.Location = new System.Drawing.Point(134, 308);
+            this.trackBar_s1_7.Maximum = 100;
             this.trackBar_s1_7.Name = "trackBar_s1_7";
             this.trackBar_s1_7.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_7.TabIndex = 104;
@@ -446,8 +448,8 @@ namespace VESS
             // trackBar_s1_6
             // 
             this.trackBar_s1_6.LargeChange = 10;
-            this.trackBar_s1_6.Location = new System.Drawing.Point(122, 276);
-            this.trackBar_s1_6.Maximum = 99;
+            this.trackBar_s1_6.Location = new System.Drawing.Point(134, 276);
+            this.trackBar_s1_6.Maximum = 100;
             this.trackBar_s1_6.Name = "trackBar_s1_6";
             this.trackBar_s1_6.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_6.TabIndex = 101;
@@ -458,8 +460,8 @@ namespace VESS
             // trackBar_s1_5
             // 
             this.trackBar_s1_5.LargeChange = 10;
-            this.trackBar_s1_5.Location = new System.Drawing.Point(122, 244);
-            this.trackBar_s1_5.Maximum = 99;
+            this.trackBar_s1_5.Location = new System.Drawing.Point(134, 244);
+            this.trackBar_s1_5.Maximum = 100;
             this.trackBar_s1_5.Name = "trackBar_s1_5";
             this.trackBar_s1_5.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_5.TabIndex = 98;
@@ -470,8 +472,8 @@ namespace VESS
             // trackBar_s1_4
             // 
             this.trackBar_s1_4.LargeChange = 10;
-            this.trackBar_s1_4.Location = new System.Drawing.Point(122, 212);
-            this.trackBar_s1_4.Maximum = 99;
+            this.trackBar_s1_4.Location = new System.Drawing.Point(134, 212);
+            this.trackBar_s1_4.Maximum = 100;
             this.trackBar_s1_4.Name = "trackBar_s1_4";
             this.trackBar_s1_4.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_4.TabIndex = 95;
@@ -482,8 +484,8 @@ namespace VESS
             // trackBar_s1_3
             // 
             this.trackBar_s1_3.LargeChange = 10;
-            this.trackBar_s1_3.Location = new System.Drawing.Point(122, 180);
-            this.trackBar_s1_3.Maximum = 99;
+            this.trackBar_s1_3.Location = new System.Drawing.Point(134, 180);
+            this.trackBar_s1_3.Maximum = 100;
             this.trackBar_s1_3.Name = "trackBar_s1_3";
             this.trackBar_s1_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_3.TabIndex = 92;
@@ -494,8 +496,8 @@ namespace VESS
             // trackBar_s1_2
             // 
             this.trackBar_s1_2.LargeChange = 10;
-            this.trackBar_s1_2.Location = new System.Drawing.Point(122, 149);
-            this.trackBar_s1_2.Maximum = 99;
+            this.trackBar_s1_2.Location = new System.Drawing.Point(134, 149);
+            this.trackBar_s1_2.Maximum = 100;
             this.trackBar_s1_2.Name = "trackBar_s1_2";
             this.trackBar_s1_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_2.TabIndex = 89;
@@ -518,9 +520,9 @@ namespace VESS
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(123, 49);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 203;
-            this.label13.Text = "15Km/h";
+            this.label13.Text = "15km/h";
             // 
             // label14
             // 
@@ -545,17 +547,17 @@ namespace VESS
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(123, 20);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(81, 13);
+            this.label17.Size = new System.Drawing.Size(79, 13);
             this.label17.TabIndex = 203;
-            this.label17.Text = "0.125Km/h";
+            this.label17.Text = "0.125km/h";
             // 
             // trackBar_s1_1
             // 
             this.trackBar_s1_1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.trackBar_s1_1.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBar_s1_1.LargeChange = 10;
-            this.trackBar_s1_1.Location = new System.Drawing.Point(122, 116);
-            this.trackBar_s1_1.Maximum = 99;
+            this.trackBar_s1_1.Location = new System.Drawing.Point(134, 116);
+            this.trackBar_s1_1.Maximum = 100;
             this.trackBar_s1_1.Name = "trackBar_s1_1";
             this.trackBar_s1_1.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s1_1.TabIndex = 86;
@@ -570,7 +572,7 @@ namespace VESS
             this.textBox_s1_1.Location = new System.Drawing.Point(78, 116);
             this.textBox_s1_1.Name = "textBox_s1_1";
             this.textBox_s1_1.ReadOnly = true;
-            this.textBox_s1_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_1.TabIndex = 85;
             this.textBox_s1_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_s1_1.TextChanged += new System.EventHandler(this.textBox_s1_1_TextChanged);
@@ -581,9 +583,9 @@ namespace VESS
             this.label18.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.Location = new System.Drawing.Point(14, 119);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 12);
+            this.label18.Size = new System.Drawing.Size(41, 12);
             this.label18.TabIndex = 87;
-            this.label18.Text = "0Km/h";
+            this.label18.Text = "0km/h";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
@@ -592,9 +594,9 @@ namespace VESS
             this.label19.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label19.Location = new System.Drawing.Point(14, 151);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.Size = new System.Drawing.Size(51, 12);
             this.label19.TabIndex = 90;
-            this.label19.Text = "2.5Km/h";
+            this.label19.Text = "2.5km/h";
             // 
             // textBox_s1_2
             // 
@@ -602,7 +604,7 @@ namespace VESS
             this.textBox_s1_2.Location = new System.Drawing.Point(78, 148);
             this.textBox_s1_2.Name = "textBox_s1_2";
             this.textBox_s1_2.ReadOnly = true;
-            this.textBox_s1_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_2.TabIndex = 88;
             this.textBox_s1_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -612,7 +614,7 @@ namespace VESS
             this.textBox_s1_3.Location = new System.Drawing.Point(78, 180);
             this.textBox_s1_3.Name = "textBox_s1_3";
             this.textBox_s1_3.ReadOnly = true;
-            this.textBox_s1_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_3.TabIndex = 91;
             this.textBox_s1_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -622,9 +624,9 @@ namespace VESS
             this.label20.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label20.Location = new System.Drawing.Point(14, 183);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 12);
+            this.label20.Size = new System.Drawing.Size(41, 12);
             this.label20.TabIndex = 93;
-            this.label20.Text = "5Km/h";
+            this.label20.Text = "5km/h";
             // 
             // label21
             // 
@@ -632,9 +634,9 @@ namespace VESS
             this.label21.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label21.Location = new System.Drawing.Point(14, 215);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 12);
+            this.label21.Size = new System.Drawing.Size(51, 12);
             this.label21.TabIndex = 96;
-            this.label21.Text = "7.5Km/h";
+            this.label21.Text = "7.5km/h";
             // 
             // textBox_s1_4
             // 
@@ -642,7 +644,7 @@ namespace VESS
             this.textBox_s1_4.Location = new System.Drawing.Point(78, 212);
             this.textBox_s1_4.Name = "textBox_s1_4";
             this.textBox_s1_4.ReadOnly = true;
-            this.textBox_s1_4.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_4.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_4.TabIndex = 94;
             this.textBox_s1_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -652,9 +654,9 @@ namespace VESS
             this.label22.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label22.Location = new System.Drawing.Point(14, 247);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 12);
+            this.label22.Size = new System.Drawing.Size(47, 12);
             this.label22.TabIndex = 99;
-            this.label22.Text = "10Km/h";
+            this.label22.Text = "10km/h";
             // 
             // textBox_s1_5
             // 
@@ -662,7 +664,7 @@ namespace VESS
             this.textBox_s1_5.Location = new System.Drawing.Point(78, 244);
             this.textBox_s1_5.Name = "textBox_s1_5";
             this.textBox_s1_5.ReadOnly = true;
-            this.textBox_s1_5.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_5.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_5.TabIndex = 97;
             this.textBox_s1_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -672,9 +674,9 @@ namespace VESS
             this.label23.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label23.Location = new System.Drawing.Point(14, 279);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 12);
+            this.label23.Size = new System.Drawing.Size(57, 12);
             this.label23.TabIndex = 102;
-            this.label23.Text = "12.5Km/h";
+            this.label23.Text = "12.5km/h";
             // 
             // textBox_s1_6
             // 
@@ -682,7 +684,7 @@ namespace VESS
             this.textBox_s1_6.Location = new System.Drawing.Point(78, 276);
             this.textBox_s1_6.Name = "textBox_s1_6";
             this.textBox_s1_6.ReadOnly = true;
-            this.textBox_s1_6.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s1_6.Size = new System.Drawing.Size(50, 21);
             this.textBox_s1_6.TabIndex = 100;
             this.textBox_s1_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -735,8 +737,8 @@ namespace VESS
             // trackBar_s3_10
             // 
             this.trackBar_s3_10.LargeChange = 10;
-            this.trackBar_s3_10.Location = new System.Drawing.Point(123, 660);
-            this.trackBar_s3_10.Maximum = 99;
+            this.trackBar_s3_10.Location = new System.Drawing.Point(134, 660);
+            this.trackBar_s3_10.Maximum = 100;
             this.trackBar_s3_10.Name = "trackBar_s3_10";
             this.trackBar_s3_10.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_10.TabIndex = 137;
@@ -747,8 +749,8 @@ namespace VESS
             // trackBar_s3_9
             // 
             this.trackBar_s3_9.LargeChange = 10;
-            this.trackBar_s3_9.Location = new System.Drawing.Point(123, 628);
-            this.trackBar_s3_9.Maximum = 99;
+            this.trackBar_s3_9.Location = new System.Drawing.Point(134, 628);
+            this.trackBar_s3_9.Maximum = 100;
             this.trackBar_s3_9.Name = "trackBar_s3_9";
             this.trackBar_s3_9.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_9.TabIndex = 134;
@@ -759,8 +761,8 @@ namespace VESS
             // trackBar_s3_8
             // 
             this.trackBar_s3_8.LargeChange = 10;
-            this.trackBar_s3_8.Location = new System.Drawing.Point(123, 596);
-            this.trackBar_s3_8.Maximum = 99;
+            this.trackBar_s3_8.Location = new System.Drawing.Point(134, 596);
+            this.trackBar_s3_8.Maximum = 100;
             this.trackBar_s3_8.Name = "trackBar_s3_8";
             this.trackBar_s3_8.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_8.TabIndex = 131;
@@ -771,8 +773,8 @@ namespace VESS
             // trackBar_s3_7
             // 
             this.trackBar_s3_7.LargeChange = 10;
-            this.trackBar_s3_7.Location = new System.Drawing.Point(123, 564);
-            this.trackBar_s3_7.Maximum = 99;
+            this.trackBar_s3_7.Location = new System.Drawing.Point(134, 564);
+            this.trackBar_s3_7.Maximum = 100;
             this.trackBar_s3_7.Name = "trackBar_s3_7";
             this.trackBar_s3_7.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_7.TabIndex = 128;
@@ -783,8 +785,8 @@ namespace VESS
             // trackBar_s3_6
             // 
             this.trackBar_s3_6.LargeChange = 10;
-            this.trackBar_s3_6.Location = new System.Drawing.Point(123, 532);
-            this.trackBar_s3_6.Maximum = 99;
+            this.trackBar_s3_6.Location = new System.Drawing.Point(134, 532);
+            this.trackBar_s3_6.Maximum = 100;
             this.trackBar_s3_6.Name = "trackBar_s3_6";
             this.trackBar_s3_6.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_6.TabIndex = 125;
@@ -795,8 +797,8 @@ namespace VESS
             // trackBar_s3_5
             // 
             this.trackBar_s3_5.LargeChange = 10;
-            this.trackBar_s3_5.Location = new System.Drawing.Point(123, 500);
-            this.trackBar_s3_5.Maximum = 99;
+            this.trackBar_s3_5.Location = new System.Drawing.Point(134, 500);
+            this.trackBar_s3_5.Maximum = 100;
             this.trackBar_s3_5.Name = "trackBar_s3_5";
             this.trackBar_s3_5.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_5.TabIndex = 122;
@@ -807,8 +809,8 @@ namespace VESS
             // trackBar_s3_4
             // 
             this.trackBar_s3_4.LargeChange = 10;
-            this.trackBar_s3_4.Location = new System.Drawing.Point(123, 468);
-            this.trackBar_s3_4.Maximum = 99;
+            this.trackBar_s3_4.Location = new System.Drawing.Point(134, 468);
+            this.trackBar_s3_4.Maximum = 100;
             this.trackBar_s3_4.Name = "trackBar_s3_4";
             this.trackBar_s3_4.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_4.TabIndex = 119;
@@ -819,8 +821,8 @@ namespace VESS
             // trackBar_s3_3
             // 
             this.trackBar_s3_3.LargeChange = 10;
-            this.trackBar_s3_3.Location = new System.Drawing.Point(123, 436);
-            this.trackBar_s3_3.Maximum = 99;
+            this.trackBar_s3_3.Location = new System.Drawing.Point(134, 436);
+            this.trackBar_s3_3.Maximum = 100;
             this.trackBar_s3_3.Name = "trackBar_s3_3";
             this.trackBar_s3_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_3.TabIndex = 116;
@@ -831,8 +833,8 @@ namespace VESS
             // trackBar_s3_2
             // 
             this.trackBar_s3_2.LargeChange = 10;
-            this.trackBar_s3_2.Location = new System.Drawing.Point(123, 404);
-            this.trackBar_s3_2.Maximum = 99;
+            this.trackBar_s3_2.Location = new System.Drawing.Point(134, 404);
+            this.trackBar_s3_2.Maximum = 100;
             this.trackBar_s3_2.Name = "trackBar_s3_2";
             this.trackBar_s3_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_2.TabIndex = 113;
@@ -846,15 +848,15 @@ namespace VESS
             this.label47.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label47.Location = new System.Drawing.Point(14, 631);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 12);
+            this.label47.Size = new System.Drawing.Size(47, 12);
             this.label47.TabIndex = 135;
-            this.label47.Text = "40Km/h";
+            this.label47.Text = "40km/h";
             // 
             // trackBar_s3_1
             // 
             this.trackBar_s3_1.LargeChange = 10;
-            this.trackBar_s3_1.Location = new System.Drawing.Point(123, 372);
-            this.trackBar_s3_1.Maximum = 99;
+            this.trackBar_s3_1.Location = new System.Drawing.Point(134, 372);
+            this.trackBar_s3_1.Maximum = 100;
             this.trackBar_s3_1.Name = "trackBar_s3_1";
             this.trackBar_s3_1.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s3_1.TabIndex = 110;
@@ -868,9 +870,9 @@ namespace VESS
             this.label48.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label48.Location = new System.Drawing.Point(14, 599);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(59, 12);
+            this.label48.Size = new System.Drawing.Size(57, 12);
             this.label48.TabIndex = 132;
-            this.label48.Text = "37.5Km/h";
+            this.label48.Text = "37.5km/h";
             // 
             // textBox_s3_9
             // 
@@ -878,7 +880,7 @@ namespace VESS
             this.textBox_s3_9.Location = new System.Drawing.Point(78, 628);
             this.textBox_s3_9.Name = "textBox_s3_9";
             this.textBox_s3_9.ReadOnly = true;
-            this.textBox_s3_9.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_9.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_9.TabIndex = 133;
             this.textBox_s3_9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -888,9 +890,9 @@ namespace VESS
             this.label49.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label49.Location = new System.Drawing.Point(14, 567);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(49, 12);
+            this.label49.Size = new System.Drawing.Size(47, 12);
             this.label49.TabIndex = 129;
-            this.label49.Text = "35Km/h";
+            this.label49.Text = "35km/h";
             // 
             // textBox_s3_8
             // 
@@ -898,7 +900,7 @@ namespace VESS
             this.textBox_s3_8.Location = new System.Drawing.Point(78, 596);
             this.textBox_s3_8.Name = "textBox_s3_8";
             this.textBox_s3_8.ReadOnly = true;
-            this.textBox_s3_8.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_8.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_8.TabIndex = 130;
             this.textBox_s3_8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -908,9 +910,9 @@ namespace VESS
             this.label50.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label50.Location = new System.Drawing.Point(14, 535);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(59, 12);
+            this.label50.Size = new System.Drawing.Size(57, 12);
             this.label50.TabIndex = 126;
-            this.label50.Text = "32.5Km/h";
+            this.label50.Text = "32.5km/h";
             // 
             // textBox_s3_7
             // 
@@ -918,7 +920,7 @@ namespace VESS
             this.textBox_s3_7.Location = new System.Drawing.Point(78, 564);
             this.textBox_s3_7.Name = "textBox_s3_7";
             this.textBox_s3_7.ReadOnly = true;
-            this.textBox_s3_7.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_7.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_7.TabIndex = 127;
             this.textBox_s3_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -928,9 +930,9 @@ namespace VESS
             this.label51.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label51.Location = new System.Drawing.Point(14, 503);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(49, 12);
+            this.label51.Size = new System.Drawing.Size(47, 12);
             this.label51.TabIndex = 123;
-            this.label51.Text = "30Km/h";
+            this.label51.Text = "30km/h";
             // 
             // textBox_s3_6
             // 
@@ -938,7 +940,7 @@ namespace VESS
             this.textBox_s3_6.Location = new System.Drawing.Point(78, 532);
             this.textBox_s3_6.Name = "textBox_s3_6";
             this.textBox_s3_6.ReadOnly = true;
-            this.textBox_s3_6.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_6.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_6.TabIndex = 124;
             this.textBox_s3_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -948,9 +950,9 @@ namespace VESS
             this.label52.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label52.Location = new System.Drawing.Point(14, 471);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(59, 12);
+            this.label52.Size = new System.Drawing.Size(57, 12);
             this.label52.TabIndex = 120;
-            this.label52.Text = "27.5Km/h";
+            this.label52.Text = "27.5km/h";
             // 
             // textBox_s3_5
             // 
@@ -958,7 +960,7 @@ namespace VESS
             this.textBox_s3_5.Location = new System.Drawing.Point(78, 500);
             this.textBox_s3_5.Name = "textBox_s3_5";
             this.textBox_s3_5.ReadOnly = true;
-            this.textBox_s3_5.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_5.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_5.TabIndex = 121;
             this.textBox_s3_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -968,9 +970,9 @@ namespace VESS
             this.label53.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label53.Location = new System.Drawing.Point(14, 439);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(49, 12);
+            this.label53.Size = new System.Drawing.Size(47, 12);
             this.label53.TabIndex = 117;
-            this.label53.Text = "25Km/h";
+            this.label53.Text = "25km/h";
             // 
             // textBox_s3_4
             // 
@@ -978,7 +980,7 @@ namespace VESS
             this.textBox_s3_4.Location = new System.Drawing.Point(78, 468);
             this.textBox_s3_4.Name = "textBox_s3_4";
             this.textBox_s3_4.ReadOnly = true;
-            this.textBox_s3_4.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_4.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_4.TabIndex = 118;
             this.textBox_s3_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -988,9 +990,9 @@ namespace VESS
             this.label54.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label54.Location = new System.Drawing.Point(14, 407);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(59, 12);
+            this.label54.Size = new System.Drawing.Size(57, 12);
             this.label54.TabIndex = 114;
-            this.label54.Text = "22.5Km/h";
+            this.label54.Text = "22.5km/h";
             // 
             // textBox_s3_3
             // 
@@ -998,7 +1000,7 @@ namespace VESS
             this.textBox_s3_3.Location = new System.Drawing.Point(78, 436);
             this.textBox_s3_3.Name = "textBox_s3_3";
             this.textBox_s3_3.ReadOnly = true;
-            this.textBox_s3_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_3.TabIndex = 115;
             this.textBox_s3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1008,9 +1010,9 @@ namespace VESS
             this.label55.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label55.Location = new System.Drawing.Point(14, 375);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(49, 12);
+            this.label55.Size = new System.Drawing.Size(47, 12);
             this.label55.TabIndex = 111;
-            this.label55.Text = "20Km/h";
+            this.label55.Text = "20km/h";
             // 
             // textBox_s3_2
             // 
@@ -1018,7 +1020,7 @@ namespace VESS
             this.textBox_s3_2.Location = new System.Drawing.Point(78, 404);
             this.textBox_s3_2.Name = "textBox_s3_2";
             this.textBox_s3_2.ReadOnly = true;
-            this.textBox_s3_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_2.TabIndex = 112;
             this.textBox_s3_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1028,7 +1030,7 @@ namespace VESS
             this.textBox_s3_1.Location = new System.Drawing.Point(78, 372);
             this.textBox_s3_1.Name = "textBox_s3_1";
             this.textBox_s3_1.ReadOnly = true;
-            this.textBox_s3_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_1.TabIndex = 109;
             this.textBox_s3_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1047,9 +1049,9 @@ namespace VESS
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(123, 49);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(73, 13);
+            this.label59.Size = new System.Drawing.Size(71, 13);
             this.label59.TabIndex = 203;
-            this.label59.Text = "42.5Km/h";
+            this.label59.Text = "42.5km/h";
             // 
             // label60
             // 
@@ -1075,9 +1077,9 @@ namespace VESS
             this.label62.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label62.Location = new System.Drawing.Point(14, 663);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(59, 12);
+            this.label62.Size = new System.Drawing.Size(57, 12);
             this.label62.TabIndex = 138;
-            this.label62.Text = "42.5Km/h";
+            this.label62.Text = "42.5km/h";
             // 
             // textBox_s3_10
             // 
@@ -1085,7 +1087,7 @@ namespace VESS
             this.textBox_s3_10.Location = new System.Drawing.Point(78, 660);
             this.textBox_s3_10.Name = "textBox_s3_10";
             this.textBox_s3_10.ReadOnly = true;
-            this.textBox_s3_10.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s3_10.Size = new System.Drawing.Size(50, 21);
             this.textBox_s3_10.TabIndex = 136;
             this.textBox_s3_10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1094,9 +1096,9 @@ namespace VESS
             this.label63.AutoSize = true;
             this.label63.Location = new System.Drawing.Point(123, 20);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(60, 13);
+            this.label63.Size = new System.Drawing.Size(58, 13);
             this.label63.TabIndex = 203;
-            this.label63.Text = "20Km/h";
+            this.label63.Text = "20km/h";
             // 
             // groupBox4
             // 
@@ -1171,8 +1173,8 @@ namespace VESS
             // trackBar_s4_18
             // 
             this.trackBar_s4_18.LargeChange = 10;
-            this.trackBar_s4_18.Location = new System.Drawing.Point(123, 660);
-            this.trackBar_s4_18.Maximum = 99;
+            this.trackBar_s4_18.Location = new System.Drawing.Point(134, 660);
+            this.trackBar_s4_18.Maximum = 100;
             this.trackBar_s4_18.Name = "trackBar_s4_18";
             this.trackBar_s4_18.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_18.TabIndex = 137;
@@ -1183,8 +1185,8 @@ namespace VESS
             // trackBar_s4_17
             // 
             this.trackBar_s4_17.LargeChange = 10;
-            this.trackBar_s4_17.Location = new System.Drawing.Point(123, 628);
-            this.trackBar_s4_17.Maximum = 99;
+            this.trackBar_s4_17.Location = new System.Drawing.Point(134, 628);
+            this.trackBar_s4_17.Maximum = 100;
             this.trackBar_s4_17.Name = "trackBar_s4_17";
             this.trackBar_s4_17.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_17.TabIndex = 134;
@@ -1195,8 +1197,8 @@ namespace VESS
             // trackBar_s4_16
             // 
             this.trackBar_s4_16.LargeChange = 10;
-            this.trackBar_s4_16.Location = new System.Drawing.Point(123, 596);
-            this.trackBar_s4_16.Maximum = 99;
+            this.trackBar_s4_16.Location = new System.Drawing.Point(134, 596);
+            this.trackBar_s4_16.Maximum = 100;
             this.trackBar_s4_16.Name = "trackBar_s4_16";
             this.trackBar_s4_16.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_16.TabIndex = 131;
@@ -1207,8 +1209,8 @@ namespace VESS
             // trackBar_s4_15
             // 
             this.trackBar_s4_15.LargeChange = 10;
-            this.trackBar_s4_15.Location = new System.Drawing.Point(123, 564);
-            this.trackBar_s4_15.Maximum = 99;
+            this.trackBar_s4_15.Location = new System.Drawing.Point(134, 564);
+            this.trackBar_s4_15.Maximum = 100;
             this.trackBar_s4_15.Name = "trackBar_s4_15";
             this.trackBar_s4_15.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_15.TabIndex = 128;
@@ -1219,8 +1221,8 @@ namespace VESS
             // trackBar_s4_14
             // 
             this.trackBar_s4_14.LargeChange = 10;
-            this.trackBar_s4_14.Location = new System.Drawing.Point(123, 532);
-            this.trackBar_s4_14.Maximum = 99;
+            this.trackBar_s4_14.Location = new System.Drawing.Point(134, 532);
+            this.trackBar_s4_14.Maximum = 100;
             this.trackBar_s4_14.Name = "trackBar_s4_14";
             this.trackBar_s4_14.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_14.TabIndex = 125;
@@ -1231,8 +1233,8 @@ namespace VESS
             // trackBar_s4_13
             // 
             this.trackBar_s4_13.LargeChange = 10;
-            this.trackBar_s4_13.Location = new System.Drawing.Point(123, 500);
-            this.trackBar_s4_13.Maximum = 99;
+            this.trackBar_s4_13.Location = new System.Drawing.Point(134, 500);
+            this.trackBar_s4_13.Maximum = 100;
             this.trackBar_s4_13.Name = "trackBar_s4_13";
             this.trackBar_s4_13.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_13.TabIndex = 122;
@@ -1243,8 +1245,8 @@ namespace VESS
             // trackBar_s4_12
             // 
             this.trackBar_s4_12.LargeChange = 10;
-            this.trackBar_s4_12.Location = new System.Drawing.Point(123, 468);
-            this.trackBar_s4_12.Maximum = 99;
+            this.trackBar_s4_12.Location = new System.Drawing.Point(134, 468);
+            this.trackBar_s4_12.Maximum = 100;
             this.trackBar_s4_12.Name = "trackBar_s4_12";
             this.trackBar_s4_12.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_12.TabIndex = 119;
@@ -1255,8 +1257,8 @@ namespace VESS
             // trackBar_s4_11
             // 
             this.trackBar_s4_11.LargeChange = 10;
-            this.trackBar_s4_11.Location = new System.Drawing.Point(123, 436);
-            this.trackBar_s4_11.Maximum = 99;
+            this.trackBar_s4_11.Location = new System.Drawing.Point(134, 436);
+            this.trackBar_s4_11.Maximum = 100;
             this.trackBar_s4_11.Name = "trackBar_s4_11";
             this.trackBar_s4_11.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_11.TabIndex = 116;
@@ -1267,8 +1269,8 @@ namespace VESS
             // trackBar_s4_10
             // 
             this.trackBar_s4_10.LargeChange = 10;
-            this.trackBar_s4_10.Location = new System.Drawing.Point(123, 404);
-            this.trackBar_s4_10.Maximum = 99;
+            this.trackBar_s4_10.Location = new System.Drawing.Point(134, 404);
+            this.trackBar_s4_10.Maximum = 100;
             this.trackBar_s4_10.Name = "trackBar_s4_10";
             this.trackBar_s4_10.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_10.TabIndex = 113;
@@ -1282,15 +1284,15 @@ namespace VESS
             this.label73.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label73.Location = new System.Drawing.Point(14, 631);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(49, 12);
+            this.label73.Size = new System.Drawing.Size(47, 12);
             this.label73.TabIndex = 135;
-            this.label73.Text = "40Km/h";
+            this.label73.Text = "40km/h";
             // 
             // trackBar_s4_9
             // 
             this.trackBar_s4_9.LargeChange = 10;
-            this.trackBar_s4_9.Location = new System.Drawing.Point(123, 372);
-            this.trackBar_s4_9.Maximum = 99;
+            this.trackBar_s4_9.Location = new System.Drawing.Point(134, 372);
+            this.trackBar_s4_9.Maximum = 100;
             this.trackBar_s4_9.Name = "trackBar_s4_9";
             this.trackBar_s4_9.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_9.TabIndex = 110;
@@ -1304,9 +1306,9 @@ namespace VESS
             this.label74.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label74.Location = new System.Drawing.Point(14, 599);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(59, 12);
+            this.label74.Size = new System.Drawing.Size(57, 12);
             this.label74.TabIndex = 132;
-            this.label74.Text = "37.5Km/h";
+            this.label74.Text = "37.5km/h";
             // 
             // textBox_s4_17
             // 
@@ -1314,7 +1316,7 @@ namespace VESS
             this.textBox_s4_17.Location = new System.Drawing.Point(78, 628);
             this.textBox_s4_17.Name = "textBox_s4_17";
             this.textBox_s4_17.ReadOnly = true;
-            this.textBox_s4_17.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_17.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_17.TabIndex = 133;
             this.textBox_s4_17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1324,9 +1326,9 @@ namespace VESS
             this.label75.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label75.Location = new System.Drawing.Point(14, 567);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(49, 12);
+            this.label75.Size = new System.Drawing.Size(47, 12);
             this.label75.TabIndex = 129;
-            this.label75.Text = "35Km/h";
+            this.label75.Text = "35km/h";
             // 
             // textBox_s4_16
             // 
@@ -1334,7 +1336,7 @@ namespace VESS
             this.textBox_s4_16.Location = new System.Drawing.Point(78, 596);
             this.textBox_s4_16.Name = "textBox_s4_16";
             this.textBox_s4_16.ReadOnly = true;
-            this.textBox_s4_16.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_16.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_16.TabIndex = 130;
             this.textBox_s4_16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1344,9 +1346,9 @@ namespace VESS
             this.label76.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label76.Location = new System.Drawing.Point(14, 535);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(59, 12);
+            this.label76.Size = new System.Drawing.Size(57, 12);
             this.label76.TabIndex = 126;
-            this.label76.Text = "32.5Km/h";
+            this.label76.Text = "32.5km/h";
             // 
             // textBox_s4_15
             // 
@@ -1354,7 +1356,7 @@ namespace VESS
             this.textBox_s4_15.Location = new System.Drawing.Point(78, 564);
             this.textBox_s4_15.Name = "textBox_s4_15";
             this.textBox_s4_15.ReadOnly = true;
-            this.textBox_s4_15.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_15.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_15.TabIndex = 127;
             this.textBox_s4_15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1364,9 +1366,9 @@ namespace VESS
             this.label77.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label77.Location = new System.Drawing.Point(14, 503);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(49, 12);
+            this.label77.Size = new System.Drawing.Size(47, 12);
             this.label77.TabIndex = 123;
-            this.label77.Text = "30Km/h";
+            this.label77.Text = "30km/h";
             // 
             // textBox_s4_14
             // 
@@ -1374,7 +1376,7 @@ namespace VESS
             this.textBox_s4_14.Location = new System.Drawing.Point(78, 532);
             this.textBox_s4_14.Name = "textBox_s4_14";
             this.textBox_s4_14.ReadOnly = true;
-            this.textBox_s4_14.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_14.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_14.TabIndex = 124;
             this.textBox_s4_14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1384,9 +1386,9 @@ namespace VESS
             this.label78.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label78.Location = new System.Drawing.Point(14, 471);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(59, 12);
+            this.label78.Size = new System.Drawing.Size(57, 12);
             this.label78.TabIndex = 120;
-            this.label78.Text = "27.5Km/h";
+            this.label78.Text = "27.5km/h";
             // 
             // textBox_s4_13
             // 
@@ -1394,7 +1396,7 @@ namespace VESS
             this.textBox_s4_13.Location = new System.Drawing.Point(78, 500);
             this.textBox_s4_13.Name = "textBox_s4_13";
             this.textBox_s4_13.ReadOnly = true;
-            this.textBox_s4_13.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_13.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_13.TabIndex = 121;
             this.textBox_s4_13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1404,9 +1406,9 @@ namespace VESS
             this.label79.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label79.Location = new System.Drawing.Point(14, 439);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(49, 12);
+            this.label79.Size = new System.Drawing.Size(47, 12);
             this.label79.TabIndex = 117;
-            this.label79.Text = "25Km/h";
+            this.label79.Text = "25km/h";
             // 
             // textBox_s4_12
             // 
@@ -1414,7 +1416,7 @@ namespace VESS
             this.textBox_s4_12.Location = new System.Drawing.Point(78, 468);
             this.textBox_s4_12.Name = "textBox_s4_12";
             this.textBox_s4_12.ReadOnly = true;
-            this.textBox_s4_12.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_12.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_12.TabIndex = 118;
             this.textBox_s4_12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1424,9 +1426,9 @@ namespace VESS
             this.label80.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label80.Location = new System.Drawing.Point(14, 407);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(59, 12);
+            this.label80.Size = new System.Drawing.Size(57, 12);
             this.label80.TabIndex = 114;
-            this.label80.Text = "22.5Km/h";
+            this.label80.Text = "22.5km/h";
             // 
             // textBox_s4_11
             // 
@@ -1434,7 +1436,7 @@ namespace VESS
             this.textBox_s4_11.Location = new System.Drawing.Point(78, 436);
             this.textBox_s4_11.Name = "textBox_s4_11";
             this.textBox_s4_11.ReadOnly = true;
-            this.textBox_s4_11.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_11.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_11.TabIndex = 115;
             this.textBox_s4_11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1445,9 +1447,9 @@ namespace VESS
             this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label81.Location = new System.Drawing.Point(14, 375);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(49, 12);
+            this.label81.Size = new System.Drawing.Size(47, 12);
             this.label81.TabIndex = 111;
-            this.label81.Text = "20Km/h";
+            this.label81.Text = "20km/h";
             // 
             // textBox_s4_10
             // 
@@ -1455,7 +1457,7 @@ namespace VESS
             this.textBox_s4_10.Location = new System.Drawing.Point(78, 404);
             this.textBox_s4_10.Name = "textBox_s4_10";
             this.textBox_s4_10.ReadOnly = true;
-            this.textBox_s4_10.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_10.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_10.TabIndex = 112;
             this.textBox_s4_10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1465,9 +1467,9 @@ namespace VESS
             this.label82.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label82.Location = new System.Drawing.Point(14, 343);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(59, 12);
+            this.label82.Size = new System.Drawing.Size(57, 12);
             this.label82.TabIndex = 108;
-            this.label82.Text = "17.5Km/h";
+            this.label82.Text = "17.5km/h";
             // 
             // textBox_s4_9
             // 
@@ -1475,7 +1477,7 @@ namespace VESS
             this.textBox_s4_9.ForeColor = System.Drawing.Color.Red;
             this.textBox_s4_9.Location = new System.Drawing.Point(78, 372);
             this.textBox_s4_9.Name = "textBox_s4_9";
-            this.textBox_s4_9.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_9.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_9.TabIndex = 109;
             this.textBox_s4_9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1485,9 +1487,9 @@ namespace VESS
             this.label83.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label83.Location = new System.Drawing.Point(14, 311);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(49, 12);
+            this.label83.Size = new System.Drawing.Size(47, 12);
             this.label83.TabIndex = 105;
-            this.label83.Text = "15Km/h";
+            this.label83.Text = "15km/h";
             // 
             // textBox_s4_8
             // 
@@ -1495,7 +1497,7 @@ namespace VESS
             this.textBox_s4_8.Location = new System.Drawing.Point(78, 340);
             this.textBox_s4_8.Name = "textBox_s4_8";
             this.textBox_s4_8.ReadOnly = true;
-            this.textBox_s4_8.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_8.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_8.TabIndex = 106;
             this.textBox_s4_8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1505,15 +1507,15 @@ namespace VESS
             this.textBox_s4_7.Location = new System.Drawing.Point(78, 308);
             this.textBox_s4_7.Name = "textBox_s4_7";
             this.textBox_s4_7.ReadOnly = true;
-            this.textBox_s4_7.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_7.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_7.TabIndex = 103;
             this.textBox_s4_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // trackBar_s4_8
             // 
             this.trackBar_s4_8.LargeChange = 10;
-            this.trackBar_s4_8.Location = new System.Drawing.Point(123, 340);
-            this.trackBar_s4_8.Maximum = 99;
+            this.trackBar_s4_8.Location = new System.Drawing.Point(134, 340);
+            this.trackBar_s4_8.Maximum = 100;
             this.trackBar_s4_8.Name = "trackBar_s4_8";
             this.trackBar_s4_8.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_8.TabIndex = 107;
@@ -1524,8 +1526,8 @@ namespace VESS
             // trackBar_s4_7
             // 
             this.trackBar_s4_7.LargeChange = 10;
-            this.trackBar_s4_7.Location = new System.Drawing.Point(123, 308);
-            this.trackBar_s4_7.Maximum = 99;
+            this.trackBar_s4_7.Location = new System.Drawing.Point(134, 308);
+            this.trackBar_s4_7.Maximum = 100;
             this.trackBar_s4_7.Name = "trackBar_s4_7";
             this.trackBar_s4_7.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_7.TabIndex = 104;
@@ -1536,8 +1538,8 @@ namespace VESS
             // trackBar_s4_6
             // 
             this.trackBar_s4_6.LargeChange = 10;
-            this.trackBar_s4_6.Location = new System.Drawing.Point(123, 276);
-            this.trackBar_s4_6.Maximum = 99;
+            this.trackBar_s4_6.Location = new System.Drawing.Point(134, 276);
+            this.trackBar_s4_6.Maximum = 100;
             this.trackBar_s4_6.Name = "trackBar_s4_6";
             this.trackBar_s4_6.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_6.TabIndex = 101;
@@ -1548,8 +1550,8 @@ namespace VESS
             // trackBar_s4_5
             // 
             this.trackBar_s4_5.LargeChange = 10;
-            this.trackBar_s4_5.Location = new System.Drawing.Point(123, 244);
-            this.trackBar_s4_5.Maximum = 99;
+            this.trackBar_s4_5.Location = new System.Drawing.Point(134, 244);
+            this.trackBar_s4_5.Maximum = 100;
             this.trackBar_s4_5.Name = "trackBar_s4_5";
             this.trackBar_s4_5.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_5.TabIndex = 98;
@@ -1560,8 +1562,8 @@ namespace VESS
             // trackBar_s4_4
             // 
             this.trackBar_s4_4.LargeChange = 10;
-            this.trackBar_s4_4.Location = new System.Drawing.Point(123, 212);
-            this.trackBar_s4_4.Maximum = 99;
+            this.trackBar_s4_4.Location = new System.Drawing.Point(134, 212);
+            this.trackBar_s4_4.Maximum = 100;
             this.trackBar_s4_4.Name = "trackBar_s4_4";
             this.trackBar_s4_4.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_4.TabIndex = 95;
@@ -1572,8 +1574,8 @@ namespace VESS
             // trackBar_s4_3
             // 
             this.trackBar_s4_3.LargeChange = 10;
-            this.trackBar_s4_3.Location = new System.Drawing.Point(123, 180);
-            this.trackBar_s4_3.Maximum = 99;
+            this.trackBar_s4_3.Location = new System.Drawing.Point(134, 180);
+            this.trackBar_s4_3.Maximum = 100;
             this.trackBar_s4_3.Name = "trackBar_s4_3";
             this.trackBar_s4_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_3.TabIndex = 92;
@@ -1584,8 +1586,8 @@ namespace VESS
             // trackBar_s4_2
             // 
             this.trackBar_s4_2.LargeChange = 10;
-            this.trackBar_s4_2.Location = new System.Drawing.Point(123, 149);
-            this.trackBar_s4_2.Maximum = 99;
+            this.trackBar_s4_2.Location = new System.Drawing.Point(134, 149);
+            this.trackBar_s4_2.Maximum = 100;
             this.trackBar_s4_2.Name = "trackBar_s4_2";
             this.trackBar_s4_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s4_2.TabIndex = 89;
@@ -1608,9 +1610,9 @@ namespace VESS
             this.label85.AutoSize = true;
             this.label85.Location = new System.Drawing.Point(123, 49);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(73, 13);
+            this.label85.Size = new System.Drawing.Size(71, 13);
             this.label85.TabIndex = 203;
-            this.label85.Text = "42.5Km/h";
+            this.label85.Text = "42.5km/h";
             // 
             // label86
             // 
@@ -1636,9 +1638,9 @@ namespace VESS
             this.label88.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label88.Location = new System.Drawing.Point(14, 663);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(59, 12);
+            this.label88.Size = new System.Drawing.Size(57, 12);
             this.label88.TabIndex = 138;
-            this.label88.Text = "42.5Km/h";
+            this.label88.Text = "42.5km/h";
             // 
             // textBox_s4_18
             // 
@@ -1646,7 +1648,7 @@ namespace VESS
             this.textBox_s4_18.Location = new System.Drawing.Point(78, 660);
             this.textBox_s4_18.Name = "textBox_s4_18";
             this.textBox_s4_18.ReadOnly = true;
-            this.textBox_s4_18.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_18.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_18.TabIndex = 136;
             this.textBox_s4_18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1655,15 +1657,15 @@ namespace VESS
             this.label89.AutoSize = true;
             this.label89.Location = new System.Drawing.Point(123, 20);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(52, 13);
+            this.label89.Size = new System.Drawing.Size(50, 13);
             this.label89.TabIndex = 203;
-            this.label89.Text = "0Km/h";
+            this.label89.Text = "0km/h";
             // 
             // trackBar_s4_1
             // 
             this.trackBar_s4_1.LargeChange = 10;
-            this.trackBar_s4_1.Location = new System.Drawing.Point(123, 116);
-            this.trackBar_s4_1.Maximum = 99;
+            this.trackBar_s4_1.Location = new System.Drawing.Point(134, 116);
+            this.trackBar_s4_1.Maximum = 100;
             this.trackBar_s4_1.Name = "trackBar_s4_1";
             this.trackBar_s4_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.trackBar_s4_1.Size = new System.Drawing.Size(104, 45);
@@ -1678,7 +1680,7 @@ namespace VESS
             this.textBox_s4_1.ForeColor = System.Drawing.Color.Red;
             this.textBox_s4_1.Location = new System.Drawing.Point(78, 116);
             this.textBox_s4_1.Name = "textBox_s4_1";
-            this.textBox_s4_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_1.TabIndex = 85;
             this.textBox_s4_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1689,9 +1691,9 @@ namespace VESS
             this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label90.Location = new System.Drawing.Point(14, 119);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(43, 12);
+            this.label90.Size = new System.Drawing.Size(41, 12);
             this.label90.TabIndex = 87;
-            this.label90.Text = "0Km/h";
+            this.label90.Text = "0km/h";
             this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label91
@@ -1700,9 +1702,9 @@ namespace VESS
             this.label91.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label91.Location = new System.Drawing.Point(14, 151);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(53, 12);
+            this.label91.Size = new System.Drawing.Size(51, 12);
             this.label91.TabIndex = 90;
-            this.label91.Text = "2.5Km/h";
+            this.label91.Text = "2.5km/h";
             // 
             // textBox_s4_2
             // 
@@ -1710,7 +1712,7 @@ namespace VESS
             this.textBox_s4_2.Location = new System.Drawing.Point(78, 148);
             this.textBox_s4_2.Name = "textBox_s4_2";
             this.textBox_s4_2.ReadOnly = true;
-            this.textBox_s4_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_2.TabIndex = 88;
             this.textBox_s4_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1720,7 +1722,7 @@ namespace VESS
             this.textBox_s4_3.Location = new System.Drawing.Point(78, 180);
             this.textBox_s4_3.Name = "textBox_s4_3";
             this.textBox_s4_3.ReadOnly = true;
-            this.textBox_s4_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_3.TabIndex = 91;
             this.textBox_s4_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1730,9 +1732,9 @@ namespace VESS
             this.label92.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label92.Location = new System.Drawing.Point(14, 183);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(43, 12);
+            this.label92.Size = new System.Drawing.Size(41, 12);
             this.label92.TabIndex = 93;
-            this.label92.Text = "5Km/h";
+            this.label92.Text = "5km/h";
             // 
             // label93
             // 
@@ -1740,9 +1742,9 @@ namespace VESS
             this.label93.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label93.Location = new System.Drawing.Point(14, 215);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(53, 12);
+            this.label93.Size = new System.Drawing.Size(51, 12);
             this.label93.TabIndex = 96;
-            this.label93.Text = "7.5Km/h";
+            this.label93.Text = "7.5km/h";
             // 
             // textBox_s4_4
             // 
@@ -1750,7 +1752,7 @@ namespace VESS
             this.textBox_s4_4.Location = new System.Drawing.Point(78, 212);
             this.textBox_s4_4.Name = "textBox_s4_4";
             this.textBox_s4_4.ReadOnly = true;
-            this.textBox_s4_4.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_4.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_4.TabIndex = 94;
             this.textBox_s4_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1761,9 +1763,9 @@ namespace VESS
             this.label94.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label94.Location = new System.Drawing.Point(14, 247);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(49, 12);
+            this.label94.Size = new System.Drawing.Size(47, 12);
             this.label94.TabIndex = 99;
-            this.label94.Text = "10Km/h";
+            this.label94.Text = "10km/h";
             // 
             // textBox_s4_5
             // 
@@ -1771,7 +1773,7 @@ namespace VESS
             this.textBox_s4_5.ForeColor = System.Drawing.Color.Red;
             this.textBox_s4_5.Location = new System.Drawing.Point(78, 244);
             this.textBox_s4_5.Name = "textBox_s4_5";
-            this.textBox_s4_5.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_5.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_5.TabIndex = 97;
             this.textBox_s4_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1781,9 +1783,9 @@ namespace VESS
             this.label95.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label95.Location = new System.Drawing.Point(14, 279);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(59, 12);
+            this.label95.Size = new System.Drawing.Size(57, 12);
             this.label95.TabIndex = 102;
-            this.label95.Text = "12.5Km/h";
+            this.label95.Text = "12.5km/h";
             // 
             // textBox_s4_6
             // 
@@ -1791,7 +1793,7 @@ namespace VESS
             this.textBox_s4_6.Location = new System.Drawing.Point(78, 276);
             this.textBox_s4_6.Name = "textBox_s4_6";
             this.textBox_s4_6.ReadOnly = true;
-            this.textBox_s4_6.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s4_6.Size = new System.Drawing.Size(50, 21);
             this.textBox_s4_6.TabIndex = 100;
             this.textBox_s4_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1868,8 +1870,8 @@ namespace VESS
             // trackBar_s5_18
             // 
             this.trackBar_s5_18.LargeChange = 10;
-            this.trackBar_s5_18.Location = new System.Drawing.Point(123, 660);
-            this.trackBar_s5_18.Maximum = 99;
+            this.trackBar_s5_18.Location = new System.Drawing.Point(134, 660);
+            this.trackBar_s5_18.Maximum = 100;
             this.trackBar_s5_18.Name = "trackBar_s5_18";
             this.trackBar_s5_18.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_18.TabIndex = 137;
@@ -1880,8 +1882,8 @@ namespace VESS
             // trackBar_s5_17
             // 
             this.trackBar_s5_17.LargeChange = 10;
-            this.trackBar_s5_17.Location = new System.Drawing.Point(123, 628);
-            this.trackBar_s5_17.Maximum = 99;
+            this.trackBar_s5_17.Location = new System.Drawing.Point(134, 628);
+            this.trackBar_s5_17.Maximum = 100;
             this.trackBar_s5_17.Name = "trackBar_s5_17";
             this.trackBar_s5_17.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_17.TabIndex = 134;
@@ -1892,8 +1894,8 @@ namespace VESS
             // trackBar_s5_16
             // 
             this.trackBar_s5_16.LargeChange = 10;
-            this.trackBar_s5_16.Location = new System.Drawing.Point(123, 596);
-            this.trackBar_s5_16.Maximum = 99;
+            this.trackBar_s5_16.Location = new System.Drawing.Point(134, 596);
+            this.trackBar_s5_16.Maximum = 100;
             this.trackBar_s5_16.Name = "trackBar_s5_16";
             this.trackBar_s5_16.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_16.TabIndex = 131;
@@ -1904,8 +1906,8 @@ namespace VESS
             // trackBar_s5_15
             // 
             this.trackBar_s5_15.LargeChange = 10;
-            this.trackBar_s5_15.Location = new System.Drawing.Point(123, 564);
-            this.trackBar_s5_15.Maximum = 99;
+            this.trackBar_s5_15.Location = new System.Drawing.Point(134, 564);
+            this.trackBar_s5_15.Maximum = 100;
             this.trackBar_s5_15.Name = "trackBar_s5_15";
             this.trackBar_s5_15.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_15.TabIndex = 128;
@@ -1916,8 +1918,8 @@ namespace VESS
             // trackBar_s5_14
             // 
             this.trackBar_s5_14.LargeChange = 10;
-            this.trackBar_s5_14.Location = new System.Drawing.Point(123, 532);
-            this.trackBar_s5_14.Maximum = 99;
+            this.trackBar_s5_14.Location = new System.Drawing.Point(134, 532);
+            this.trackBar_s5_14.Maximum = 100;
             this.trackBar_s5_14.Name = "trackBar_s5_14";
             this.trackBar_s5_14.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_14.TabIndex = 125;
@@ -1928,8 +1930,8 @@ namespace VESS
             // trackBar_s5_13
             // 
             this.trackBar_s5_13.LargeChange = 10;
-            this.trackBar_s5_13.Location = new System.Drawing.Point(123, 500);
-            this.trackBar_s5_13.Maximum = 99;
+            this.trackBar_s5_13.Location = new System.Drawing.Point(134, 500);
+            this.trackBar_s5_13.Maximum = 100;
             this.trackBar_s5_13.Name = "trackBar_s5_13";
             this.trackBar_s5_13.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_13.TabIndex = 122;
@@ -1940,8 +1942,8 @@ namespace VESS
             // trackBar_s5_12
             // 
             this.trackBar_s5_12.LargeChange = 10;
-            this.trackBar_s5_12.Location = new System.Drawing.Point(123, 468);
-            this.trackBar_s5_12.Maximum = 99;
+            this.trackBar_s5_12.Location = new System.Drawing.Point(134, 468);
+            this.trackBar_s5_12.Maximum = 100;
             this.trackBar_s5_12.Name = "trackBar_s5_12";
             this.trackBar_s5_12.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_12.TabIndex = 119;
@@ -1952,8 +1954,8 @@ namespace VESS
             // trackBar_s5_11
             // 
             this.trackBar_s5_11.LargeChange = 10;
-            this.trackBar_s5_11.Location = new System.Drawing.Point(123, 436);
-            this.trackBar_s5_11.Maximum = 99;
+            this.trackBar_s5_11.Location = new System.Drawing.Point(134, 436);
+            this.trackBar_s5_11.Maximum = 100;
             this.trackBar_s5_11.Name = "trackBar_s5_11";
             this.trackBar_s5_11.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_11.TabIndex = 116;
@@ -1964,8 +1966,8 @@ namespace VESS
             // trackBar_s5_10
             // 
             this.trackBar_s5_10.LargeChange = 10;
-            this.trackBar_s5_10.Location = new System.Drawing.Point(123, 404);
-            this.trackBar_s5_10.Maximum = 99;
+            this.trackBar_s5_10.Location = new System.Drawing.Point(134, 404);
+            this.trackBar_s5_10.Maximum = 100;
             this.trackBar_s5_10.Name = "trackBar_s5_10";
             this.trackBar_s5_10.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_10.TabIndex = 113;
@@ -1979,15 +1981,15 @@ namespace VESS
             this.label96.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label96.Location = new System.Drawing.Point(14, 631);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(49, 12);
+            this.label96.Size = new System.Drawing.Size(47, 12);
             this.label96.TabIndex = 135;
-            this.label96.Text = "40Km/h";
+            this.label96.Text = "40km/h";
             // 
             // trackBar_s5_9
             // 
             this.trackBar_s5_9.LargeChange = 10;
-            this.trackBar_s5_9.Location = new System.Drawing.Point(123, 372);
-            this.trackBar_s5_9.Maximum = 99;
+            this.trackBar_s5_9.Location = new System.Drawing.Point(134, 372);
+            this.trackBar_s5_9.Maximum = 100;
             this.trackBar_s5_9.Name = "trackBar_s5_9";
             this.trackBar_s5_9.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_9.TabIndex = 110;
@@ -2001,9 +2003,9 @@ namespace VESS
             this.label97.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label97.Location = new System.Drawing.Point(14, 599);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(59, 12);
+            this.label97.Size = new System.Drawing.Size(57, 12);
             this.label97.TabIndex = 132;
-            this.label97.Text = "37.5Km/h";
+            this.label97.Text = "37.5km/h";
             // 
             // textBox_s5_17
             // 
@@ -2011,7 +2013,7 @@ namespace VESS
             this.textBox_s5_17.Location = new System.Drawing.Point(78, 628);
             this.textBox_s5_17.Name = "textBox_s5_17";
             this.textBox_s5_17.ReadOnly = true;
-            this.textBox_s5_17.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_17.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_17.TabIndex = 133;
             this.textBox_s5_17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2021,9 +2023,9 @@ namespace VESS
             this.label98.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label98.Location = new System.Drawing.Point(14, 567);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(49, 12);
+            this.label98.Size = new System.Drawing.Size(47, 12);
             this.label98.TabIndex = 129;
-            this.label98.Text = "35Km/h";
+            this.label98.Text = "35km/h";
             // 
             // textBox_s5_16
             // 
@@ -2031,7 +2033,7 @@ namespace VESS
             this.textBox_s5_16.Location = new System.Drawing.Point(78, 596);
             this.textBox_s5_16.Name = "textBox_s5_16";
             this.textBox_s5_16.ReadOnly = true;
-            this.textBox_s5_16.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_16.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_16.TabIndex = 130;
             this.textBox_s5_16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2041,9 +2043,9 @@ namespace VESS
             this.label99.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label99.Location = new System.Drawing.Point(14, 535);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(59, 12);
+            this.label99.Size = new System.Drawing.Size(57, 12);
             this.label99.TabIndex = 126;
-            this.label99.Text = "32.5Km/h";
+            this.label99.Text = "32.5km/h";
             // 
             // textBox_s5_15
             // 
@@ -2051,7 +2053,7 @@ namespace VESS
             this.textBox_s5_15.Location = new System.Drawing.Point(78, 564);
             this.textBox_s5_15.Name = "textBox_s5_15";
             this.textBox_s5_15.ReadOnly = true;
-            this.textBox_s5_15.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_15.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_15.TabIndex = 127;
             this.textBox_s5_15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2061,9 +2063,9 @@ namespace VESS
             this.label100.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label100.Location = new System.Drawing.Point(14, 503);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(49, 12);
+            this.label100.Size = new System.Drawing.Size(47, 12);
             this.label100.TabIndex = 123;
-            this.label100.Text = "30Km/h";
+            this.label100.Text = "30km/h";
             // 
             // textBox_s5_14
             // 
@@ -2071,7 +2073,7 @@ namespace VESS
             this.textBox_s5_14.Location = new System.Drawing.Point(78, 532);
             this.textBox_s5_14.Name = "textBox_s5_14";
             this.textBox_s5_14.ReadOnly = true;
-            this.textBox_s5_14.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_14.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_14.TabIndex = 124;
             this.textBox_s5_14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2081,9 +2083,9 @@ namespace VESS
             this.label101.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label101.Location = new System.Drawing.Point(14, 471);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(59, 12);
+            this.label101.Size = new System.Drawing.Size(57, 12);
             this.label101.TabIndex = 120;
-            this.label101.Text = "27.5Km/h";
+            this.label101.Text = "27.5km/h";
             // 
             // textBox_s5_13
             // 
@@ -2091,7 +2093,7 @@ namespace VESS
             this.textBox_s5_13.Location = new System.Drawing.Point(78, 500);
             this.textBox_s5_13.Name = "textBox_s5_13";
             this.textBox_s5_13.ReadOnly = true;
-            this.textBox_s5_13.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_13.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_13.TabIndex = 121;
             this.textBox_s5_13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2101,9 +2103,9 @@ namespace VESS
             this.label102.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label102.Location = new System.Drawing.Point(14, 439);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(49, 12);
+            this.label102.Size = new System.Drawing.Size(47, 12);
             this.label102.TabIndex = 117;
-            this.label102.Text = "25Km/h";
+            this.label102.Text = "25km/h";
             // 
             // textBox_s5_12
             // 
@@ -2111,7 +2113,7 @@ namespace VESS
             this.textBox_s5_12.Location = new System.Drawing.Point(78, 468);
             this.textBox_s5_12.Name = "textBox_s5_12";
             this.textBox_s5_12.ReadOnly = true;
-            this.textBox_s5_12.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_12.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_12.TabIndex = 118;
             this.textBox_s5_12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2121,9 +2123,9 @@ namespace VESS
             this.label103.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label103.Location = new System.Drawing.Point(14, 407);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(59, 12);
+            this.label103.Size = new System.Drawing.Size(57, 12);
             this.label103.TabIndex = 114;
-            this.label103.Text = "22.5Km/h";
+            this.label103.Text = "22.5km/h";
             // 
             // textBox_s5_11
             // 
@@ -2131,7 +2133,7 @@ namespace VESS
             this.textBox_s5_11.Location = new System.Drawing.Point(78, 436);
             this.textBox_s5_11.Name = "textBox_s5_11";
             this.textBox_s5_11.ReadOnly = true;
-            this.textBox_s5_11.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_11.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_11.TabIndex = 115;
             this.textBox_s5_11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2142,9 +2144,9 @@ namespace VESS
             this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label104.Location = new System.Drawing.Point(14, 375);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(49, 12);
+            this.label104.Size = new System.Drawing.Size(47, 12);
             this.label104.TabIndex = 111;
-            this.label104.Text = "20Km/h";
+            this.label104.Text = "20km/h";
             // 
             // textBox_s5_10
             // 
@@ -2152,7 +2154,7 @@ namespace VESS
             this.textBox_s5_10.Location = new System.Drawing.Point(78, 404);
             this.textBox_s5_10.Name = "textBox_s5_10";
             this.textBox_s5_10.ReadOnly = true;
-            this.textBox_s5_10.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_10.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_10.TabIndex = 112;
             this.textBox_s5_10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2162,9 +2164,9 @@ namespace VESS
             this.label105.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label105.Location = new System.Drawing.Point(14, 343);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(59, 12);
+            this.label105.Size = new System.Drawing.Size(57, 12);
             this.label105.TabIndex = 108;
-            this.label105.Text = "17.5Km/h";
+            this.label105.Text = "17.5km/h";
             // 
             // textBox_s5_9
             // 
@@ -2172,7 +2174,7 @@ namespace VESS
             this.textBox_s5_9.ForeColor = System.Drawing.Color.Red;
             this.textBox_s5_9.Location = new System.Drawing.Point(78, 372);
             this.textBox_s5_9.Name = "textBox_s5_9";
-            this.textBox_s5_9.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_9.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_9.TabIndex = 109;
             this.textBox_s5_9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2182,9 +2184,9 @@ namespace VESS
             this.label106.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label106.Location = new System.Drawing.Point(14, 311);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(49, 12);
+            this.label106.Size = new System.Drawing.Size(47, 12);
             this.label106.TabIndex = 105;
-            this.label106.Text = "15Km/h";
+            this.label106.Text = "15km/h";
             // 
             // textBox_s5_8
             // 
@@ -2192,7 +2194,7 @@ namespace VESS
             this.textBox_s5_8.Location = new System.Drawing.Point(78, 340);
             this.textBox_s5_8.Name = "textBox_s5_8";
             this.textBox_s5_8.ReadOnly = true;
-            this.textBox_s5_8.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_8.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_8.TabIndex = 106;
             this.textBox_s5_8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2202,15 +2204,15 @@ namespace VESS
             this.textBox_s5_7.Location = new System.Drawing.Point(78, 308);
             this.textBox_s5_7.Name = "textBox_s5_7";
             this.textBox_s5_7.ReadOnly = true;
-            this.textBox_s5_7.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_7.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_7.TabIndex = 103;
             this.textBox_s5_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // trackBar_s5_8
             // 
             this.trackBar_s5_8.LargeChange = 10;
-            this.trackBar_s5_8.Location = new System.Drawing.Point(123, 340);
-            this.trackBar_s5_8.Maximum = 99;
+            this.trackBar_s5_8.Location = new System.Drawing.Point(134, 340);
+            this.trackBar_s5_8.Maximum = 100;
             this.trackBar_s5_8.Name = "trackBar_s5_8";
             this.trackBar_s5_8.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_8.TabIndex = 107;
@@ -2221,8 +2223,8 @@ namespace VESS
             // trackBar_s5_7
             // 
             this.trackBar_s5_7.LargeChange = 10;
-            this.trackBar_s5_7.Location = new System.Drawing.Point(123, 308);
-            this.trackBar_s5_7.Maximum = 99;
+            this.trackBar_s5_7.Location = new System.Drawing.Point(134, 308);
+            this.trackBar_s5_7.Maximum = 100;
             this.trackBar_s5_7.Name = "trackBar_s5_7";
             this.trackBar_s5_7.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_7.TabIndex = 104;
@@ -2233,8 +2235,8 @@ namespace VESS
             // trackBar_s5_6
             // 
             this.trackBar_s5_6.LargeChange = 10;
-            this.trackBar_s5_6.Location = new System.Drawing.Point(123, 276);
-            this.trackBar_s5_6.Maximum = 99;
+            this.trackBar_s5_6.Location = new System.Drawing.Point(134, 276);
+            this.trackBar_s5_6.Maximum = 100;
             this.trackBar_s5_6.Name = "trackBar_s5_6";
             this.trackBar_s5_6.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_6.TabIndex = 101;
@@ -2245,8 +2247,8 @@ namespace VESS
             // trackBar_s5_5
             // 
             this.trackBar_s5_5.LargeChange = 10;
-            this.trackBar_s5_5.Location = new System.Drawing.Point(123, 244);
-            this.trackBar_s5_5.Maximum = 99;
+            this.trackBar_s5_5.Location = new System.Drawing.Point(134, 244);
+            this.trackBar_s5_5.Maximum = 100;
             this.trackBar_s5_5.Name = "trackBar_s5_5";
             this.trackBar_s5_5.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_5.TabIndex = 98;
@@ -2257,8 +2259,8 @@ namespace VESS
             // trackBar_s5_4
             // 
             this.trackBar_s5_4.LargeChange = 10;
-            this.trackBar_s5_4.Location = new System.Drawing.Point(123, 212);
-            this.trackBar_s5_4.Maximum = 99;
+            this.trackBar_s5_4.Location = new System.Drawing.Point(134, 212);
+            this.trackBar_s5_4.Maximum = 100;
             this.trackBar_s5_4.Name = "trackBar_s5_4";
             this.trackBar_s5_4.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_4.TabIndex = 95;
@@ -2269,8 +2271,8 @@ namespace VESS
             // trackBar_s5_3
             // 
             this.trackBar_s5_3.LargeChange = 10;
-            this.trackBar_s5_3.Location = new System.Drawing.Point(123, 180);
-            this.trackBar_s5_3.Maximum = 99;
+            this.trackBar_s5_3.Location = new System.Drawing.Point(134, 180);
+            this.trackBar_s5_3.Maximum = 100;
             this.trackBar_s5_3.Name = "trackBar_s5_3";
             this.trackBar_s5_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_3.TabIndex = 92;
@@ -2281,8 +2283,8 @@ namespace VESS
             // trackBar_s5_2
             // 
             this.trackBar_s5_2.LargeChange = 10;
-            this.trackBar_s5_2.Location = new System.Drawing.Point(123, 149);
-            this.trackBar_s5_2.Maximum = 99;
+            this.trackBar_s5_2.Location = new System.Drawing.Point(134, 149);
+            this.trackBar_s5_2.Maximum = 100;
             this.trackBar_s5_2.Name = "trackBar_s5_2";
             this.trackBar_s5_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s5_2.TabIndex = 89;
@@ -2305,9 +2307,9 @@ namespace VESS
             this.label108.AutoSize = true;
             this.label108.Location = new System.Drawing.Point(123, 49);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(73, 13);
+            this.label108.Size = new System.Drawing.Size(71, 13);
             this.label108.TabIndex = 203;
-            this.label108.Text = "42.5Km/h";
+            this.label108.Text = "42.5km/h";
             // 
             // label109
             // 
@@ -2333,9 +2335,9 @@ namespace VESS
             this.label111.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label111.Location = new System.Drawing.Point(14, 663);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(59, 12);
+            this.label111.Size = new System.Drawing.Size(57, 12);
             this.label111.TabIndex = 138;
-            this.label111.Text = "42.5Km/h";
+            this.label111.Text = "42.5km/h";
             // 
             // textBox_s5_18
             // 
@@ -2343,7 +2345,7 @@ namespace VESS
             this.textBox_s5_18.Location = new System.Drawing.Point(78, 660);
             this.textBox_s5_18.Name = "textBox_s5_18";
             this.textBox_s5_18.ReadOnly = true;
-            this.textBox_s5_18.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_18.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_18.TabIndex = 136;
             this.textBox_s5_18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2352,15 +2354,15 @@ namespace VESS
             this.label112.AutoSize = true;
             this.label112.Location = new System.Drawing.Point(123, 20);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(81, 13);
+            this.label112.Size = new System.Drawing.Size(79, 13);
             this.label112.TabIndex = 203;
-            this.label112.Text = "0.125Km/h";
+            this.label112.Text = "0.125km/h";
             // 
             // trackBar_s5_1
             // 
             this.trackBar_s5_1.LargeChange = 10;
-            this.trackBar_s5_1.Location = new System.Drawing.Point(123, 116);
-            this.trackBar_s5_1.Maximum = 99;
+            this.trackBar_s5_1.Location = new System.Drawing.Point(134, 116);
+            this.trackBar_s5_1.Maximum = 100;
             this.trackBar_s5_1.Name = "trackBar_s5_1";
             this.trackBar_s5_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.trackBar_s5_1.Size = new System.Drawing.Size(104, 45);
@@ -2375,7 +2377,7 @@ namespace VESS
             this.textBox_s5_1.ForeColor = System.Drawing.Color.Red;
             this.textBox_s5_1.Location = new System.Drawing.Point(78, 116);
             this.textBox_s5_1.Name = "textBox_s5_1";
-            this.textBox_s5_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_1.TabIndex = 85;
             this.textBox_s5_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2386,9 +2388,9 @@ namespace VESS
             this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label113.Location = new System.Drawing.Point(14, 119);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(43, 12);
+            this.label113.Size = new System.Drawing.Size(41, 12);
             this.label113.TabIndex = 87;
-            this.label113.Text = "0Km/h";
+            this.label113.Text = "0km/h";
             this.label113.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label114
@@ -2397,9 +2399,9 @@ namespace VESS
             this.label114.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label114.Location = new System.Drawing.Point(14, 151);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(53, 12);
+            this.label114.Size = new System.Drawing.Size(51, 12);
             this.label114.TabIndex = 90;
-            this.label114.Text = "2.5Km/h";
+            this.label114.Text = "2.5km/h";
             // 
             // textBox_s5_2
             // 
@@ -2407,7 +2409,7 @@ namespace VESS
             this.textBox_s5_2.Location = new System.Drawing.Point(78, 148);
             this.textBox_s5_2.Name = "textBox_s5_2";
             this.textBox_s5_2.ReadOnly = true;
-            this.textBox_s5_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_2.TabIndex = 88;
             this.textBox_s5_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2417,7 +2419,7 @@ namespace VESS
             this.textBox_s5_3.Location = new System.Drawing.Point(78, 180);
             this.textBox_s5_3.Name = "textBox_s5_3";
             this.textBox_s5_3.ReadOnly = true;
-            this.textBox_s5_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_3.TabIndex = 91;
             this.textBox_s5_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2427,9 +2429,9 @@ namespace VESS
             this.label115.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label115.Location = new System.Drawing.Point(14, 183);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(43, 12);
+            this.label115.Size = new System.Drawing.Size(41, 12);
             this.label115.TabIndex = 93;
-            this.label115.Text = "5Km/h";
+            this.label115.Text = "5km/h";
             // 
             // label116
             // 
@@ -2437,9 +2439,9 @@ namespace VESS
             this.label116.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label116.Location = new System.Drawing.Point(14, 215);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(53, 12);
+            this.label116.Size = new System.Drawing.Size(51, 12);
             this.label116.TabIndex = 96;
-            this.label116.Text = "7.5Km/h";
+            this.label116.Text = "7.5km/h";
             // 
             // textBox_s5_4
             // 
@@ -2447,7 +2449,7 @@ namespace VESS
             this.textBox_s5_4.Location = new System.Drawing.Point(78, 212);
             this.textBox_s5_4.Name = "textBox_s5_4";
             this.textBox_s5_4.ReadOnly = true;
-            this.textBox_s5_4.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_4.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_4.TabIndex = 94;
             this.textBox_s5_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2458,9 +2460,9 @@ namespace VESS
             this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label117.Location = new System.Drawing.Point(14, 247);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(49, 12);
+            this.label117.Size = new System.Drawing.Size(47, 12);
             this.label117.TabIndex = 99;
-            this.label117.Text = "10Km/h";
+            this.label117.Text = "10km/h";
             // 
             // textBox_s5_5
             // 
@@ -2468,7 +2470,7 @@ namespace VESS
             this.textBox_s5_5.ForeColor = System.Drawing.Color.Red;
             this.textBox_s5_5.Location = new System.Drawing.Point(78, 244);
             this.textBox_s5_5.Name = "textBox_s5_5";
-            this.textBox_s5_5.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_5.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_5.TabIndex = 97;
             this.textBox_s5_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2478,9 +2480,9 @@ namespace VESS
             this.label118.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label118.Location = new System.Drawing.Point(14, 279);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(59, 12);
+            this.label118.Size = new System.Drawing.Size(57, 12);
             this.label118.TabIndex = 102;
-            this.label118.Text = "12.5Km/h";
+            this.label118.Text = "12.5km/h";
             // 
             // textBox_s5_6
             // 
@@ -2488,7 +2490,7 @@ namespace VESS
             this.textBox_s5_6.Location = new System.Drawing.Point(78, 276);
             this.textBox_s5_6.Name = "textBox_s5_6";
             this.textBox_s5_6.ReadOnly = true;
-            this.textBox_s5_6.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s5_6.Size = new System.Drawing.Size(50, 21);
             this.textBox_s5_6.TabIndex = 100;
             this.textBox_s5_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2520,8 +2522,8 @@ namespace VESS
             // trackBar_s6_3
             // 
             this.trackBar_s6_3.LargeChange = 10;
-            this.trackBar_s6_3.Location = new System.Drawing.Point(123, 180);
-            this.trackBar_s6_3.Maximum = 99;
+            this.trackBar_s6_3.Location = new System.Drawing.Point(129, 180);
+            this.trackBar_s6_3.Maximum = 100;
             this.trackBar_s6_3.Name = "trackBar_s6_3";
             this.trackBar_s6_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s6_3.TabIndex = 92;
@@ -2532,8 +2534,8 @@ namespace VESS
             // trackBar_s6_2
             // 
             this.trackBar_s6_2.LargeChange = 10;
-            this.trackBar_s6_2.Location = new System.Drawing.Point(123, 149);
-            this.trackBar_s6_2.Maximum = 99;
+            this.trackBar_s6_2.Location = new System.Drawing.Point(129, 149);
+            this.trackBar_s6_2.Maximum = 100;
             this.trackBar_s6_2.Name = "trackBar_s6_2";
             this.trackBar_s6_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s6_2.TabIndex = 89;
@@ -2556,9 +2558,9 @@ namespace VESS
             this.label131.AutoSize = true;
             this.label131.Location = new System.Drawing.Point(123, 49);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(68, 13);
+            this.label131.Size = new System.Drawing.Size(66, 13);
             this.label131.TabIndex = 203;
-            this.label131.Text = "100Km/h";
+            this.label131.Text = "100km/h";
             // 
             // label132
             // 
@@ -2583,15 +2585,15 @@ namespace VESS
             this.label135.AutoSize = true;
             this.label135.Location = new System.Drawing.Point(123, 20);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(52, 13);
+            this.label135.Size = new System.Drawing.Size(50, 13);
             this.label135.TabIndex = 203;
-            this.label135.Text = "0Km/h";
+            this.label135.Text = "0km/h";
             // 
             // trackBar_s6_1
             // 
             this.trackBar_s6_1.LargeChange = 10;
-            this.trackBar_s6_1.Location = new System.Drawing.Point(123, 116);
-            this.trackBar_s6_1.Maximum = 99;
+            this.trackBar_s6_1.Location = new System.Drawing.Point(129, 116);
+            this.trackBar_s6_1.Maximum = 100;
             this.trackBar_s6_1.Name = "trackBar_s6_1";
             this.trackBar_s6_1.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s6_1.TabIndex = 86;
@@ -2605,7 +2607,7 @@ namespace VESS
             this.textBox_s6_1.Location = new System.Drawing.Point(78, 116);
             this.textBox_s6_1.Name = "textBox_s6_1";
             this.textBox_s6_1.ReadOnly = true;
-            this.textBox_s6_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s6_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s6_1.TabIndex = 85;
             this.textBox_s6_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2615,9 +2617,9 @@ namespace VESS
             this.label136.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label136.Location = new System.Drawing.Point(14, 119);
             this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(43, 12);
+            this.label136.Size = new System.Drawing.Size(41, 12);
             this.label136.TabIndex = 87;
-            this.label136.Text = "0Km/h";
+            this.label136.Text = "0km/h";
             this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label137
@@ -2626,9 +2628,9 @@ namespace VESS
             this.label137.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label137.Location = new System.Drawing.Point(14, 151);
             this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(49, 12);
+            this.label137.Size = new System.Drawing.Size(47, 12);
             this.label137.TabIndex = 90;
-            this.label137.Text = "35Km/h";
+            this.label137.Text = "35km/h";
             // 
             // textBox_s6_2
             // 
@@ -2636,7 +2638,7 @@ namespace VESS
             this.textBox_s6_2.Location = new System.Drawing.Point(78, 148);
             this.textBox_s6_2.Name = "textBox_s6_2";
             this.textBox_s6_2.ReadOnly = true;
-            this.textBox_s6_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s6_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s6_2.TabIndex = 88;
             this.textBox_s6_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2646,7 +2648,7 @@ namespace VESS
             this.textBox_s6_3.Location = new System.Drawing.Point(78, 180);
             this.textBox_s6_3.Name = "textBox_s6_3";
             this.textBox_s6_3.ReadOnly = true;
-            this.textBox_s6_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s6_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s6_3.TabIndex = 91;
             this.textBox_s6_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2656,9 +2658,9 @@ namespace VESS
             this.label138.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label138.Location = new System.Drawing.Point(14, 183);
             this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(55, 12);
+            this.label138.Size = new System.Drawing.Size(53, 12);
             this.label138.TabIndex = 93;
-            this.label138.Text = "100Km/h";
+            this.label138.Text = "100km/h";
             // 
             // button3
             // 
@@ -2710,7 +2712,7 @@ namespace VESS
             this.textBox_s2_2.Location = new System.Drawing.Point(78, 276);
             this.textBox_s2_2.Name = "textBox_s2_2";
             this.textBox_s2_2.ReadOnly = true;
-            this.textBox_s2_2.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_2.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_2.TabIndex = 100;
             this.textBox_s2_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2720,9 +2722,9 @@ namespace VESS
             this.label46.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label46.Location = new System.Drawing.Point(14, 279);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(59, 12);
+            this.label46.Size = new System.Drawing.Size(57, 12);
             this.label46.TabIndex = 102;
-            this.label46.Text = "12.5Km/h";
+            this.label46.Text = "12.5km/h";
             // 
             // textBox_s2_1
             // 
@@ -2730,7 +2732,7 @@ namespace VESS
             this.textBox_s2_1.Location = new System.Drawing.Point(78, 244);
             this.textBox_s2_1.Name = "textBox_s2_1";
             this.textBox_s2_1.ReadOnly = true;
-            this.textBox_s2_1.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_1.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_1.TabIndex = 97;
             this.textBox_s2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2740,18 +2742,18 @@ namespace VESS
             this.label45.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label45.Location = new System.Drawing.Point(14, 247);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(49, 12);
+            this.label45.Size = new System.Drawing.Size(47, 12);
             this.label45.TabIndex = 99;
-            this.label45.Text = "10Km/h";
+            this.label45.Text = "10km/h";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(123, 20);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 13);
+            this.label40.Size = new System.Drawing.Size(58, 13);
             this.label40.TabIndex = 203;
-            this.label40.Text = "10Km/h";
+            this.label40.Text = "10km/h";
             // 
             // label38
             // 
@@ -2776,9 +2778,9 @@ namespace VESS
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(123, 49);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 13);
+            this.label36.Size = new System.Drawing.Size(58, 13);
             this.label36.TabIndex = 203;
-            this.label36.Text = "25Km/h";
+            this.label36.Text = "25km/h";
             // 
             // label35
             // 
@@ -2793,8 +2795,8 @@ namespace VESS
             // trackBar_s2_1
             // 
             this.trackBar_s2_1.LargeChange = 10;
-            this.trackBar_s2_1.Location = new System.Drawing.Point(123, 244);
-            this.trackBar_s2_1.Maximum = 99;
+            this.trackBar_s2_1.Location = new System.Drawing.Point(134, 244);
+            this.trackBar_s2_1.Maximum = 100;
             this.trackBar_s2_1.Name = "trackBar_s2_1";
             this.trackBar_s2_1.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_1.TabIndex = 98;
@@ -2805,8 +2807,8 @@ namespace VESS
             // trackBar_s2_2
             // 
             this.trackBar_s2_2.LargeChange = 10;
-            this.trackBar_s2_2.Location = new System.Drawing.Point(123, 276);
-            this.trackBar_s2_2.Maximum = 99;
+            this.trackBar_s2_2.Location = new System.Drawing.Point(134, 276);
+            this.trackBar_s2_2.Maximum = 100;
             this.trackBar_s2_2.Name = "trackBar_s2_2";
             this.trackBar_s2_2.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_2.TabIndex = 101;
@@ -2817,8 +2819,8 @@ namespace VESS
             // trackBar_s2_3
             // 
             this.trackBar_s2_3.LargeChange = 10;
-            this.trackBar_s2_3.Location = new System.Drawing.Point(123, 308);
-            this.trackBar_s2_3.Maximum = 99;
+            this.trackBar_s2_3.Location = new System.Drawing.Point(134, 308);
+            this.trackBar_s2_3.Maximum = 100;
             this.trackBar_s2_3.Name = "trackBar_s2_3";
             this.trackBar_s2_3.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_3.TabIndex = 104;
@@ -2829,8 +2831,8 @@ namespace VESS
             // trackBar_s2_4
             // 
             this.trackBar_s2_4.LargeChange = 10;
-            this.trackBar_s2_4.Location = new System.Drawing.Point(123, 340);
-            this.trackBar_s2_4.Maximum = 99;
+            this.trackBar_s2_4.Location = new System.Drawing.Point(134, 340);
+            this.trackBar_s2_4.Maximum = 100;
             this.trackBar_s2_4.Name = "trackBar_s2_4";
             this.trackBar_s2_4.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_4.TabIndex = 107;
@@ -2844,7 +2846,7 @@ namespace VESS
             this.textBox_s2_3.Location = new System.Drawing.Point(78, 308);
             this.textBox_s2_3.Name = "textBox_s2_3";
             this.textBox_s2_3.ReadOnly = true;
-            this.textBox_s2_3.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_3.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_3.TabIndex = 103;
             this.textBox_s2_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2854,7 +2856,7 @@ namespace VESS
             this.textBox_s2_4.Location = new System.Drawing.Point(78, 340);
             this.textBox_s2_4.Name = "textBox_s2_4";
             this.textBox_s2_4.ReadOnly = true;
-            this.textBox_s2_4.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_4.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_4.TabIndex = 106;
             this.textBox_s2_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2864,9 +2866,9 @@ namespace VESS
             this.label34.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label34.Location = new System.Drawing.Point(14, 311);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(49, 12);
+            this.label34.Size = new System.Drawing.Size(47, 12);
             this.label34.TabIndex = 105;
-            this.label34.Text = "15Km/h";
+            this.label34.Text = "15km/h";
             // 
             // textBox_s2_5
             // 
@@ -2874,7 +2876,7 @@ namespace VESS
             this.textBox_s2_5.Location = new System.Drawing.Point(78, 372);
             this.textBox_s2_5.Name = "textBox_s2_5";
             this.textBox_s2_5.ReadOnly = true;
-            this.textBox_s2_5.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_5.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_5.TabIndex = 109;
             this.textBox_s2_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2884,9 +2886,9 @@ namespace VESS
             this.label33.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label33.Location = new System.Drawing.Point(14, 343);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(59, 12);
+            this.label33.Size = new System.Drawing.Size(57, 12);
             this.label33.TabIndex = 108;
-            this.label33.Text = "17.5Km/h";
+            this.label33.Text = "17.5km/h";
             // 
             // textBox_s2_6
             // 
@@ -2894,7 +2896,7 @@ namespace VESS
             this.textBox_s2_6.Location = new System.Drawing.Point(78, 404);
             this.textBox_s2_6.Name = "textBox_s2_6";
             this.textBox_s2_6.ReadOnly = true;
-            this.textBox_s2_6.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_6.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_6.TabIndex = 112;
             this.textBox_s2_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2904,9 +2906,9 @@ namespace VESS
             this.label32.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label32.Location = new System.Drawing.Point(14, 375);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(49, 12);
+            this.label32.Size = new System.Drawing.Size(47, 12);
             this.label32.TabIndex = 111;
-            this.label32.Text = "20Km/h";
+            this.label32.Text = "20km/h";
             // 
             // textBox_s2_7
             // 
@@ -2914,7 +2916,7 @@ namespace VESS
             this.textBox_s2_7.Location = new System.Drawing.Point(78, 436);
             this.textBox_s2_7.Name = "textBox_s2_7";
             this.textBox_s2_7.ReadOnly = true;
-            this.textBox_s2_7.Size = new System.Drawing.Size(43, 21);
+            this.textBox_s2_7.Size = new System.Drawing.Size(50, 21);
             this.textBox_s2_7.TabIndex = 115;
             this.textBox_s2_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -2924,9 +2926,9 @@ namespace VESS
             this.label31.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label31.Location = new System.Drawing.Point(14, 407);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(59, 12);
+            this.label31.Size = new System.Drawing.Size(57, 12);
             this.label31.TabIndex = 114;
-            this.label31.Text = "22.5Km/h";
+            this.label31.Text = "22.5km/h";
             // 
             // label30
             // 
@@ -2934,15 +2936,15 @@ namespace VESS
             this.label30.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label30.Location = new System.Drawing.Point(14, 439);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(49, 12);
+            this.label30.Size = new System.Drawing.Size(47, 12);
             this.label30.TabIndex = 117;
-            this.label30.Text = "25Km/h";
+            this.label30.Text = "25km/h";
             // 
             // trackBar_s2_5
             // 
             this.trackBar_s2_5.LargeChange = 10;
-            this.trackBar_s2_5.Location = new System.Drawing.Point(123, 372);
-            this.trackBar_s2_5.Maximum = 99;
+            this.trackBar_s2_5.Location = new System.Drawing.Point(134, 372);
+            this.trackBar_s2_5.Maximum = 100;
             this.trackBar_s2_5.Name = "trackBar_s2_5";
             this.trackBar_s2_5.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_5.TabIndex = 110;
@@ -2953,8 +2955,8 @@ namespace VESS
             // trackBar_s2_6
             // 
             this.trackBar_s2_6.LargeChange = 10;
-            this.trackBar_s2_6.Location = new System.Drawing.Point(123, 404);
-            this.trackBar_s2_6.Maximum = 99;
+            this.trackBar_s2_6.Location = new System.Drawing.Point(134, 404);
+            this.trackBar_s2_6.Maximum = 100;
             this.trackBar_s2_6.Name = "trackBar_s2_6";
             this.trackBar_s2_6.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_6.TabIndex = 113;
@@ -2965,8 +2967,8 @@ namespace VESS
             // trackBar_s2_7
             // 
             this.trackBar_s2_7.LargeChange = 10;
-            this.trackBar_s2_7.Location = new System.Drawing.Point(123, 436);
-            this.trackBar_s2_7.Maximum = 99;
+            this.trackBar_s2_7.Location = new System.Drawing.Point(134, 436);
+            this.trackBar_s2_7.Maximum = 100;
             this.trackBar_s2_7.Name = "trackBar_s2_7";
             this.trackBar_s2_7.Size = new System.Drawing.Size(104, 45);
             this.trackBar_s2_7.TabIndex = 116;
@@ -3013,6 +3015,8 @@ namespace VESS
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.button_config_import);
+            this.groupBox7.Controls.Add(this.button_config_export);
             this.groupBox7.Controls.Add(this.button_dump);
             this.groupBox7.Controls.Add(this.button6);
             this.groupBox7.Controls.Add(this.checkBox_mute_reverse);
@@ -3043,6 +3047,36 @@ namespace VESS
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "VESS Simulator";
             // 
+            // button_config_import
+            // 
+            this.button_config_import.Location = new System.Drawing.Point(1377, 15);
+            this.button_config_import.Name = "button_config_import";
+            this.button_config_import.Size = new System.Drawing.Size(102, 44);
+            this.button_config_import.TabIndex = 221;
+            this.button_config_import.Text = "설정 가져오기";
+            this.button_config_import.UseVisualStyleBackColor = true;
+            this.button_config_import.Click += new System.EventHandler(this.button_config_import_Click);
+            // 
+            // button_config_export
+            // 
+            this.button_config_export.Location = new System.Drawing.Point(1261, 16);
+            this.button_config_export.Name = "button_config_export";
+            this.button_config_export.Size = new System.Drawing.Size(104, 43);
+            this.button_config_export.TabIndex = 221;
+            this.button_config_export.Text = "설정 내보내기";
+            this.button_config_export.UseVisualStyleBackColor = true;
+            this.button_config_export.Click += new System.EventHandler(this.button_config_export_Click);
+            // 
+            // button_dump
+            // 
+            this.button_dump.Location = new System.Drawing.Point(1143, 15);
+            this.button_dump.Name = "button_dump";
+            this.button_dump.Size = new System.Drawing.Size(105, 44);
+            this.button_dump.TabIndex = 220;
+            this.button_dump.Text = "설정 덤프";
+            this.button_dump.UseVisualStyleBackColor = true;
+            this.button_dump.Click += new System.EventHandler(this.button_dump_Click);
+            // 
             // checkBox_mute_reverse
             // 
             this.checkBox_mute_reverse.AutoSize = true;
@@ -3057,7 +3091,7 @@ namespace VESS
             // checkBox_Mute
             // 
             this.checkBox_Mute.AutoSize = true;
-            this.checkBox_Mute.Location = new System.Drawing.Point(496, 24);
+            this.checkBox_Mute.Location = new System.Drawing.Point(282, 51);
             this.checkBox_Mute.Name = "checkBox_Mute";
             this.checkBox_Mute.Size = new System.Drawing.Size(92, 16);
             this.checkBox_Mute.TabIndex = 215;
@@ -3079,7 +3113,7 @@ namespace VESS
             // checkBox_reverse
             // 
             this.checkBox_reverse.AutoSize = true;
-            this.checkBox_reverse.Location = new System.Drawing.Point(1165, 22);
+            this.checkBox_reverse.Location = new System.Drawing.Point(1067, 22);
             this.checkBox_reverse.Name = "checkBox_reverse";
             this.checkBox_reverse.Size = new System.Drawing.Size(70, 16);
             this.checkBox_reverse.TabIndex = 3;
@@ -3102,7 +3136,7 @@ namespace VESS
             // 
             this.label_Speed.AutoSize = true;
             this.label_Speed.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label_Speed.Location = new System.Drawing.Point(619, 22);
+            this.label_Speed.Location = new System.Drawing.Point(521, 22);
             this.label_Speed.Name = "label_Speed";
             this.label_Speed.Size = new System.Drawing.Size(39, 15);
             this.label_Speed.TabIndex = 2;
@@ -3121,7 +3155,7 @@ namespace VESS
             // 
             // textBox_Speed
             // 
-            this.textBox_Speed.Location = new System.Drawing.Point(668, 19);
+            this.textBox_Speed.Location = new System.Drawing.Point(570, 19);
             this.textBox_Speed.Name = "textBox_Speed";
             this.textBox_Speed.Size = new System.Drawing.Size(69, 21);
             this.textBox_Speed.TabIndex = 1;
@@ -3140,7 +3174,7 @@ namespace VESS
             // 
             // trackBar_Speed
             // 
-            this.trackBar_Speed.Location = new System.Drawing.Point(745, 19);
+            this.trackBar_Speed.Location = new System.Drawing.Point(647, 19);
             this.trackBar_Speed.Maximum = 40;
             this.trackBar_Speed.Name = "trackBar_Speed";
             this.trackBar_Speed.Size = new System.Drawing.Size(413, 45);
@@ -3161,7 +3195,7 @@ namespace VESS
             // 
             // textBox_volume
             // 
-            this.textBox_volume.Location = new System.Drawing.Point(420, 22);
+            this.textBox_volume.Location = new System.Drawing.Point(438, 22);
             this.textBox_volume.Name = "textBox_volume";
             this.textBox_volume.Size = new System.Drawing.Size(62, 21);
             this.textBox_volume.TabIndex = 218;
@@ -3191,7 +3225,7 @@ namespace VESS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 25);
+            this.label1.Location = new System.Drawing.Point(274, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 12);
             this.label1.TabIndex = 217;
@@ -3200,29 +3234,20 @@ namespace VESS
             // trackBar_volume
             // 
             this.trackBar_volume.LargeChange = 10;
-            this.trackBar_volume.Location = new System.Drawing.Point(310, 22);
-            this.trackBar_volume.Maximum = 99;
+            this.trackBar_volume.Location = new System.Drawing.Point(328, 22);
+            this.trackBar_volume.Maximum = 100;
             this.trackBar_volume.Name = "trackBar_volume";
             this.trackBar_volume.Size = new System.Drawing.Size(104, 45);
             this.trackBar_volume.TabIndex = 216;
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_volume.Value = 50;
             this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
-            // 
-            // button_dump
-            // 
-            this.button_dump.Location = new System.Drawing.Point(1259, 15);
-            this.button_dump.Name = "button_dump";
-            this.button_dump.Size = new System.Drawing.Size(105, 44);
-            this.button_dump.TabIndex = 220;
-            this.button_dump.Text = "설정 덤프";
-            this.button_dump.UseVisualStyleBackColor = true;
-            this.button_dump.Click += new System.EventHandler(this.button_dump_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1513, 895);
+            this.ClientSize = new System.Drawing.Size(1499, 895);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -3567,6 +3592,8 @@ namespace VESS
         private System.Windows.Forms.CheckBox checkBox_mute5;
         private System.Windows.Forms.CheckBox checkBox_mute_reverse;
         private System.Windows.Forms.Button button_dump;
+        private System.Windows.Forms.Button button_config_import;
+        private System.Windows.Forms.Button button_config_export;
     }
 }
 

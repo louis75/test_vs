@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 
+
 namespace VESS
 {
     public partial class Form1 : Form
@@ -25,36 +26,49 @@ namespace VESS
             init_sound4();
             init_sound5();
             init_sound6();
-            
+            trackBar_Speed.Value = 0;
+            textBox_Speed.Text = "0 km/h";
             //m_AudioStreams = new Stream[(int)WaveSrc.SOUND_MAX];
+            from_trackbar_to_textbox(trackBar_volume, ref textBox_volume);
         }
 
         private WaveLib.WaveOutPlayer m_Player;
         private WaveLib.WaveFormat m_Format;
         private Stream m_AudioStream;
+
+        private byte[] audiobuf;
+        private string ProfileName;
         //private System.Windows.Forms.OpenFileDialog OpenDlg;
 
         private void Filler(IntPtr data, int size)
         {
-            byte[] b = new byte[size];
+            //byte[] b = new byte[size];
+            
             if (m_AudioStream != null)
             {
                 int pos = 0;
                 while (pos < size)
                 {
+                    
                     int toget = size - pos;
-                    int got = m_AudioStream.Read(b, pos, toget);
+                    int got = m_AudioStream.Read(audiobuf, pos, toget);
+                    
                     if (got < toget)
+                    {
                         m_AudioStream.Position = 0; // loop if the file ends
+                        Debug.WriteLine("Filler call. size:" + size + " pos:" + pos + " got:" + got + " toget:" + toget);
+                    }
                     pos += got;
                 }
             }
             else
             {
-                for (int i = 0; i < b.Length; i++)
-                    b[i] = 0;
+                Debug.WriteLine("Filler call. no audiostream");
+                for (int i = 0; i < audiobuf.Length; i++)
+                    audiobuf[i] = 0;
             }
-            System.Runtime.InteropServices.Marshal.Copy(b, 0, data, size);
+            //System.Runtime.InteropServices.Marshal.Copy(b, 0, data, size);
+            System.Runtime.InteropServices.Marshal.Copy(audiobuf, 0, data, size);
         }
 
         private void Stop()
@@ -79,6 +93,12 @@ namespace VESS
             {
                 Debug.WriteLine("Play sound");
                 m_AudioStream.Position = 0;
+                if (audiobuf == null)
+                {
+                    audiobuf = new byte[16384];
+                    Debug.WriteLine("create audiobuf");
+                }
+                    
                 m_Player = new WaveLib.WaveOutPlayer(-1, m_Format, 16384, 3, new WaveLib.BufferFillEventHandler(Filler));
             }
         }
@@ -100,7 +120,7 @@ namespace VESS
         }
 
         public enum WaveSrc { SOUND1, SOUND2, SOUND3, SOUND4, SOUND5, SOUND6, SOUND_MAX };
-        private void OpenWaveFile(int num, ref string filename, string txtsavefilename)
+        private void OpenWaveFile(int num, ref string filename)
         {
             var dlg = new OpenFileDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
@@ -135,7 +155,8 @@ namespace VESS
                 Buffer.BlockCopy(buffer, 0, sampleBuffer, 0, read);
 
                 Debug.WriteLine(sampleBuffer.Length.ToString() + " " + sampleBuffer[0].ToString("X4"));
-                saveAsciiFromWav(sampleBuffer, txtsavefilename);
+                //saveAsciiFromWav(sampleBuffer, txtsavefilename);
+                saveAsciiFromWav(sampleBuffer, filename+".inc");
                 GC.SuppressFinalize(this);
             }
         }
@@ -146,42 +167,42 @@ namespace VESS
             Debug.WriteLine("sound1 button click");
             Debug.Flush();
 
-            OpenWaveFile((int)WaveSrc.SOUND1, ref sound1_filename, "test1.txt");
+            OpenWaveFile((int)WaveSrc.SOUND1, ref sound1_filename);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("sound2 button click");
             Debug.Flush();
-            OpenWaveFile((int)WaveSrc.SOUND2, ref sound2_filename, "test2.txt");
+            OpenWaveFile((int)WaveSrc.SOUND2, ref sound2_filename);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("sound3 button click");
             Debug.Flush();
-            OpenWaveFile((int)WaveSrc.SOUND3, ref sound3_filename, "test3.txt");
+            OpenWaveFile((int)WaveSrc.SOUND3, ref sound3_filename);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("sound4 button click");
             Debug.Flush();
-            OpenWaveFile((int)WaveSrc.SOUND4, ref sound4_filename, "test4.txt");
+            OpenWaveFile((int)WaveSrc.SOUND4, ref sound4_filename);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("sound5 button click");
             Debug.Flush();
-            OpenWaveFile((int)WaveSrc.SOUND5, ref sound5_filename, "test5.txt");
+            OpenWaveFile((int)WaveSrc.SOUND5, ref sound5_filename);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("sound6 button click");
             Debug.Flush();
-            OpenWaveFile((int)WaveSrc.SOUND6, ref sound6_filename, "test6.txt");
+            OpenWaveFile((int)WaveSrc.SOUND6, ref sound6_filename);
         }
 
 
@@ -553,18 +574,22 @@ namespace VESS
         {
             from_trackbar_to_textbox(trackBar_s6_1, ref textBox_s6_1);
             update_volumes(trackBar_s6_1, 5, 0);
+            update_config(trackBar_s6_1, 0, 14);
         }
 
         private void trackBar_s6_2_Scroll(object sender, EventArgs e)
         {
             from_trackbar_to_textbox(trackBar_s6_2, ref textBox_s6_2);
-            update_volumes(trackBar_s6_2, 5, 1);
+            update_volumes(trackBar_s6_2, 5, 14);
+            update_config(trackBar_s6_1, 0, 14);
+            update_config(trackBar_s6_1, 14, 39);
         }
 
         private void trackBar_s6_3_Scroll(object sender, EventArgs e)
         {
             from_trackbar_to_textbox(trackBar_s6_3, ref textBox_s6_3);
-            update_volumes(trackBar_s6_3, 5, 2);
+            update_volumes(trackBar_s6_3, 5, 39);
+            update_config(trackBar_s6_1, 14, 39);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -575,7 +600,7 @@ namespace VESS
         private void trackBar_Speed_Scroll(object sender, EventArgs e)
         {
             int val = Convert.ToInt16(trackBar_Speed.Value.ToString());
-            textBox_Speed.Text = Convert.ToString(val * 2.5) + " Km/h";
+            textBox_Speed.Text = Convert.ToString(val * 2.5) + " km/h";
         }
 
         private void trackBar_volume_Scroll(object sender, EventArgs e)
@@ -663,7 +688,68 @@ namespace VESS
 
         private void button_dump_Click(object sender, EventArgs e)
         {
-            dumpAsciiFromVolumeConfig("config.txt");
+            var dlg = new OpenFileDialog();
+            dlg.CheckFileExists = false;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                var filename = dlg.FileName;
+                dumpAsciiFromVolumeConfig(filename);
+                MessageBox.Show("설정이 덤프 되었습니다.");
+            }
+            else
+            {
+                MessageBox.Show("다시 시도해보세요.");
+            }
         }
+
+        private void button_config_import_Click(object sender, EventArgs e)
+        {
+            SelectProfile(false);
+            Debug.WriteLine(ProfileName);
+            var s = GetIniSection(ProfileName, "VESS Configuration");
+            Debug.WriteLine("import: ");
+            String[] names = s.Split('\0');
+            foreach (String name in names)
+            {
+                if (name != String.Empty)
+                {
+                    
+                    string pname = GetField(name, "=", 1);
+                    string pdata = GetField(name, "=", 2);
+                    Debug.WriteLine("cfg: " + name + " pname:"+pname + " pdata:"+pdata);
+                    set_trackbar1_from_string(ref pname, ref pdata);
+                    set_trackbar2_from_string(ref pname, ref pdata);
+                    set_trackbar3_from_string(ref pname, ref pdata);
+                    set_trackbar4_from_string(ref pname, ref pdata);
+                    set_trackbar5_from_string(ref pname, ref pdata);
+                    set_trackbar6_from_string(ref pname, ref pdata);
+                }      
+            }
+            init_sound1();
+            init_sound2();
+            init_sound3();
+            init_sound4();
+            init_sound5();
+            init_sound6();
+            MessageBox.Show("설정 가져오기 완료");
+        }
+
+
+        private void button_config_export_Click(object sender, EventArgs e)
+        {
+            SelectProfile(true);
+            Debug.WriteLine(ProfileName);
+
+            save_sound1();
+            save_sound2();
+            save_sound3();
+            save_sound4();
+            save_sound5();
+            save_sound6();
+            MessageBox.Show("설정 내보내기 완료");
+        }
+
+        
+        
     }
 }

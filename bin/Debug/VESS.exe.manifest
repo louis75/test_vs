@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VESS.exe" size="87520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VESS.exe" size="98272">
       <assemblyIdentity name="VESS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vExYPGjnmBI+xitxA4CYQaDNJHg=</dsig:DigestValue>
+        <dsig:DigestValue>xaunhooYuGNxJ8wiebS5ZDc2rGk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
